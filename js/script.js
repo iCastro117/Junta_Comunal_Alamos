@@ -33,6 +33,45 @@ const banners = [
   }
 ];
 
+/* ============================================================
+   MENU PARA CELULAR (las tres rayitas del header)
+   Funciona en todas las paginas del sitio.
+   ============================================================ */
+const botonMenu = document.getElementById("botonMenu");
+const menu = document.getElementById("menu");
+
+if (botonMenu && menu) {
+  /* Abre y cierra el menu */
+  botonMenu.addEventListener("click", function () {
+    const abierto = menu.classList.toggle("nav--abierto");
+    botonMenu.classList.toggle("menu-movil--abierto", abierto);
+    botonMenu.setAttribute("aria-expanded", abierto ? "true" : "false");
+    botonMenu.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+  });
+
+  /* Al tocar cualquier enlace del menu, se cierra solo */
+  menu.querySelectorAll("a").forEach(function (enlace) {
+    enlace.addEventListener("click", function () {
+      menu.classList.remove("nav--abierto");
+      botonMenu.classList.remove("menu-movil--abierto");
+      botonMenu.setAttribute("aria-expanded", "false");
+      botonMenu.setAttribute("aria-label", "Abrir menú");
+    });
+  });
+
+  /* Si se agranda la pantalla, se vuelve al menu normal */
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1024) {
+      menu.classList.remove("nav--abierto");
+      botonMenu.classList.remove("menu-movil--abierto");
+      botonMenu.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+/* ============================================================
+   CARRUSEL (solo corre en la pagina principal)
+   ============================================================ */
 const fondo = document.getElementById("heroFondo");
 const textos = document.getElementById("heroTextos");
 const titulo = document.getElementById("heroTitulo");
@@ -74,21 +113,25 @@ function mostrarBanner(indice) {
   });
 }
 
-/* Flechas laterales */
-anterior.addEventListener("click", function () {
-  mostrarBanner(actual - 1);
-});
+/* El carrusel solo existe en index.html; en las paginas de noticia no se activa */
+if (fondo && anterior && siguiente) {
 
-siguiente.addEventListener("click", function () {
-  mostrarBanner(actual + 1);
-});
-
-/* Puntos de abajo */
-puntos.forEach(function (punto, i) {
-  punto.addEventListener("click", function () {
-    mostrarBanner(i);
+  /* Flechas laterales */
+  anterior.addEventListener("click", function () {
+    mostrarBanner(actual - 1);
   });
-});
 
-/* Primer banner al cargar la página */
-mostrarBanner(0);
+  siguiente.addEventListener("click", function () {
+    mostrarBanner(actual + 1);
+  });
+
+  /* Puntos de abajo */
+  puntos.forEach(function (punto, i) {
+    punto.addEventListener("click", function () {
+      mostrarBanner(i);
+    });
+  });
+
+  /* Primer banner al cargar la página */
+  mostrarBanner(0);
+}

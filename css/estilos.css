@@ -856,86 +856,9 @@ svg { width: 100%; height: 100%; }
 .pie__legal-inner a { transition: color .2s ease; }
 .pie__legal-inner a:hover { color: var(--blanco); }
 
-/* ---------- 14. Responsive ---------- */
-@media (max-width: 1024px) {
-  .nav__lista { display: none; }
-  .menu-movil { display: flex; }
-
-  .accesos { grid-template-columns: repeat(2, 1fr); }
-  .acceso + .acceso { box-shadow: none; }
-  .acceso:nth-child(even) { box-shadow: inset 1px 0 0 rgba(255, 255, 255, .12); }
-  .acceso:nth-child(n + 3) { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12); }
-  .acceso:nth-child(4) { box-shadow: inset 1px 0 0 rgba(255, 255, 255, .12), inset 0 1px 0 rgba(255, 255, 255, .12); }
-
-  .bienestar__grid { grid-template-columns: 1fr; gap: 46px; }
-
-  .grid-noticias,
-  .grid-redes { grid-template-columns: repeat(2, 1fr); }
-
-  .cerca__grid { grid-template-columns: 1fr; }
-
-  .hero__contenido { margin-left: 0; }
-  .marca { margin-left: 0; }
-
-  .pie__grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .pie__marca { grid-column: 1 / -1; }
-  .pie__col::before { display: none; }
-}
-
-@media (max-width: 760px) {
-  .contenedor { padding-inline: 16px; }
-
-  .marca__linea1 { font-size: .82rem; }
-  .marca__linea2 { font-size: 1.1rem; }
-  .marca__logo { width: 44px; height: 44px; }
-  .nav .btn--verde { padding: 10px 18px; font-size: .85rem; }
-
-  .hero { min-height: 480px; }
-  .hero__contenido { padding-block: 64px 120px; margin-left: 0; }
-  .hero__velo {
-    background: linear-gradient(180deg,
-      rgba(10, 52, 27, .92) 0%,
-      rgba(10, 52, 27, .78) 55%,
-      rgba(10, 52, 27, .55) 100%);
-  }
-  .hero__flecha { display: none; }
-  .hero__puntos { bottom: 92px; }
-  .hero__botones .btn { flex: 1 1 100%; justify-content: center; }
-
-  .accesos { grid-template-columns: 1fr; }
-  .acceso,
-  .acceso:nth-child(even),
-  .acceso:nth-child(n + 3),
-  .acceso:nth-child(4) { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12); }
-  .acceso:first-child { box-shadow: none; }
-
-  .bienestar,
-  .canal,
-  .conectate,
-  .cerca { padding-block: 60px; }
-
-  .filtros { justify-content: flex-start; gap: 8px; }
-  .filtro { padding: 9px 18px; font-size: .84rem; }
-
-  .grid-noticias,
-  .grid-redes { grid-template-columns: 1fr; }
-  .tarjeta-red { min-height: 0; }
-
-  .formulario { padding: 24px 20px 28px; }
-  .formulario__campos { grid-template-columns: 1fr; }
-  .campo { grid-column: 1 / -1; }
-
-  .visitanos__titulo { font-size: 1.4rem; }
-  .mapa__marco { height: 200px; }
-
-  .pie__grid { grid-template-columns: 1fr; gap: 30px; padding-block: 36px; }
-  .pie__marca { flex-direction: column; align-items: flex-start; gap: 14px; }
-  .pie__logo { width: 76px; height: 76px; }
-  .pie__legal-inner { flex-direction: column; align-items: flex-start; }
-}
 
 /* ============================================================
-   15. PAGINA DE NOTICIA (noticia-1.html ... noticia-6.html)
+   14. PAGINA DE NOTICIA (noticia-1.html ... noticia-6.html)
    ============================================================ */
 
 /* ---------- Miga de pan ---------- */
@@ -1080,17 +1003,183 @@ svg { width: 100%; height: 100%; }
 }
 .lateral__categorias a:hover { color: var(--verde-600); }
 
+/* ============================================================
+   15. ADAPTACION A CELULAR, TABLET Y PANTALLAS PEQUENAS
+   ============================================================ */
+
+/* Para que el header fijo no tape las secciones al usar el menu */
+section[id],
+.hero[id] { scroll-margin-top: 100px; }
+
+/* ---------- Menu desplegable (las tres rayitas) ---------- */
+.menu-movil span { transition: transform .25s ease, opacity .2s ease; }
+.menu-movil--abierto span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.menu-movil--abierto span:nth-child(2) { opacity: 0; }
+.menu-movil--abierto span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* ============================================================
+   TABLET Y CELULAR GRANDE  (hasta 1024px)
+   ============================================================ */
 @media (max-width: 1024px) {
+
+  /* --- Header: el menu y el boton Contactanos pasan a las rayitas --- */
+  .menu-movil { display: flex; }
+  .marca { margin-left: 0; }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 6px 24px 20px;
+    background: var(--blanco);
+    border-top: 1px solid var(--borde);
+    box-shadow: var(--sombra);
+  }
+  .nav--abierto { display: flex; }
+
+  .nav__lista { flex-direction: column; align-items: stretch; gap: 0; }
+  .nav__lista li { border-bottom: 1px solid var(--borde); }
+
+  .nav__enlace { display: block; padding: 15px 2px; font-size: 1rem; }
+  .nav__enlace--activo::after { display: none; }
+
+  .nav .btn--verde { margin-top: 18px; justify-content: center; }
+
+  /* --- Banner: texto y debajo los dos botones --- */
+  .hero__contenido { margin-left: 0; max-width: 100%; }
+  .hero__velo {
+    background: linear-gradient(180deg,
+      rgba(10, 52, 27, .94) 0%,
+      rgba(10, 52, 27, .80) 55%,
+      rgba(10, 52, 27, .58) 100%);
+  }
+
+  /* --- Accesos rapidos: dos columnas --- */
+  .accesos { grid-template-columns: repeat(2, 1fr); }
+  .acceso + .acceso { box-shadow: none; }
+  .acceso:nth-child(even) { box-shadow: inset 1px 0 0 rgba(255, 255, 255, .12); }
+  .acceso:nth-child(n + 3) { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12); }
+  .acceso:nth-child(4) { box-shadow: inset 1px 0 0 rgba(255, 255, 255, .12), inset 0 1px 0 rgba(255, 255, 255, .12); }
+
+  /* --- Secciones en una sola columna --- */
+  .bienestar__grid { grid-template-columns: 1fr; gap: 46px; }
+  .cerca__grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .grid-noticias,
+  .grid-redes { grid-template-columns: repeat(2, 1fr); }
+  .tarjeta-red { min-height: 0; }
+
+  /* --- Paginas de noticia --- */
   .articulo__grid { grid-template-columns: 1fr; }
   .lateral { position: static; }
+
+  /* --- Pie de pagina --- */
+  .pie__grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .pie__marca { grid-column: 1 / -1; }
+  .pie__col::before { display: none; }
 }
 
+/* ============================================================
+   CELULAR  (hasta 760px)
+   ============================================================ */
 @media (max-width: 760px) {
-  .miga__inner { padding-block: 18px; }
-  .miga__titulo { font-size: 1.05rem; }
 
-  .articulo { padding-block: 28px 56px; }
+  .contenedor { padding-inline: 16px; }
+  .nav { padding-inline: 16px; }
+
+  /* --- Header mas compacto --- */
+  .header__inner { min-height: 72px; }
+  .marca__logo { width: 42px; height: 42px; }
+  .marca__linea1 { font-size: .76rem; }
+  .marca__linea2 { font-size: 1.05rem; }
+
+  /* --- Banner --- */
+  .hero { min-height: 0; }
+  .hero__contenido { padding-block: 56px 112px; }
+  .hero__titulo { font-size: clamp(2.1rem, 9vw, 2.8rem); }
+  .hero__texto { font-size: 1rem; margin-bottom: 28px; }
+
+  /* Los dos botones quedan uno debajo del otro, debajo del texto */
+  .hero__botones { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero__botones .btn { justify-content: center; width: 100%; }
+
+  .hero__flecha { display: none; }
+  .hero__puntos { bottom: 84px; }
+
+  /* --- Accesos rapidos: uno debajo del otro --- */
+  .accesos-wrap { margin-top: -46px; }
+  .accesos { grid-template-columns: 1fr; }
+  .acceso,
+  .acceso:nth-child(even),
+  .acceso:nth-child(n + 3),
+  .acceso:nth-child(4) { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12); }
+  .acceso:first-child { box-shadow: none; }
+
+  /* --- Espaciado general de las secciones --- */
+  .bienestar,
+  .canal,
+  .conectate,
+  .cerca { padding-block: 56px; }
+
+  /* --- Noticias --- */
+  .filtros { justify-content: flex-start; gap: 8px; margin-bottom: 22px; }
+  .filtro { padding: 9px 16px; font-size: .82rem; }
+
+  .grid-noticias,
+  .grid-redes { grid-template-columns: 1fr; }
+  .canal__accion .btn { width: 100%; justify-content: center; }
+
+  /* --- Formulario de contacto --- */
+  .formulario { padding: 24px 20px 28px; }
+  .formulario__campos { grid-template-columns: 1fr; }
+  .campo { grid-column: 1 / -1; }
+
+  .visitanos__titulo { font-size: 1.35rem; }
+  .mapa__marco { height: 210px; }
+  .btn--mapa { justify-content: center; }
+
+  /* --- Paginas de noticia --- */
+  .miga__inner { padding-block: 16px; }
+  .miga__titulo { font-size: 1.05rem; }
+  .articulo { padding-block: 26px 52px; }
   .articulo__meta { margin-inline: 20px; }
   .articulo__texto { padding-inline: 20px; }
   .btn--volver { margin-inline: 20px; }
+
+  /* --- Pie de pagina --- */
+  .pie__grid { grid-template-columns: 1fr; gap: 28px; padding-block: 34px; }
+  .pie__marca { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .pie__logo { width: 72px; height: 72px; }
+  .pie__legal-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============================================================
+   CELULAR PEQUENO  (hasta 460px)
+   ============================================================ */
+@media (max-width: 460px) {
+
+  .marca__linea1 { font-size: .7rem; }
+  .marca__linea2 { font-size: .95rem; }
+  .marca__logo { width: 38px; height: 38px; }
+
+  .hero__titulo { font-size: 2rem; }
+  .hero__contenido { padding-block: 44px 100px; }
+  .hero__puntos { bottom: 74px; }
+
+  .titulo-seccion { font-size: 1.6rem; }
+  .subtitulo { font-size: .94rem; }
+  .sobretitulo { font-size: .7rem; }
+
+  .acceso { padding: 20px 18px; }
+  .noticia__img { height: 190px; }
+  .tarjeta-red__img { height: 170px; }
+
+  .formulario__titulo { font-size: 1.25rem; }
+  .cifra strong { font-size: 1.7rem; }
+  .pie__datos li { font-size: .82rem; }
 }
