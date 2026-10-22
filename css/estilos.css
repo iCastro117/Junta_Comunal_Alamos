@@ -1052,11 +1052,12 @@ section[id],
 
   /* --- Banner: texto y debajo los dos botones --- */
   .hero__contenido { margin-left: 0; max-width: 100%; }
+  /* Velo mas liviano: se alcanza a ver la foto detras del texto */
   .hero__velo {
     background: linear-gradient(180deg,
-      rgba(10, 52, 27, .94) 0%,
-      rgba(10, 52, 27, .80) 55%,
-      rgba(10, 52, 27, .58) 100%);
+      rgba(10, 52, 27, .88) 0%,
+      rgba(10, 52, 27, .64) 45%,
+      rgba(10, 52, 27, .38) 100%);
   }
 
   /* --- Accesos rapidos: dos columnas --- */
@@ -1100,20 +1101,27 @@ section[id],
 
   /* --- Banner --- */
   .hero { min-height: 0; }
-  .hero__contenido { padding-block: 56px 112px; }
-  .hero__titulo { font-size: clamp(2.1rem, 9vw, 2.8rem); }
-  .hero__texto { font-size: 1rem; margin-bottom: 28px; }
+  .hero__contenido { padding-block: 52px 76px; }
+  .hero__titulo { font-size: clamp(2rem, 8.5vw, 2.6rem); margin-bottom: 16px; }
+  .hero__texto { font-size: .98rem; margin-bottom: 26px; }
 
-  /* Los dos botones quedan uno debajo del otro, debajo del texto */
-  .hero__botones { flex-direction: column; align-items: stretch; gap: 12px; }
-  .hero__botones .btn { justify-content: center; width: 100%; }
+  /* Botones del tamano de su texto, no a lo ancho de la pantalla */
+  .hero__botones { flex-direction: row; flex-wrap: wrap; gap: 12px; }
+  .hero__botones .btn {
+    width: auto;
+    flex: 0 1 auto;
+    padding: 13px 22px;
+    font-size: .9rem;
+  }
 
   .hero__flecha { display: none; }
-  .hero__puntos { bottom: 84px; }
+  .hero__puntos { bottom: 30px; }
 
-  /* --- Accesos rapidos: uno debajo del otro --- */
-  .accesos-wrap { margin-top: -46px; }
+  /* --- Accesos rapidos: ya no se montan sobre el banner --- */
+  .accesos-wrap { margin-top: 22px; }
   .accesos { grid-template-columns: 1fr; }
+  .acceso { padding: 18px 20px; }
+  .acceso__icono { width: 42px; height: 42px; padding: 10px; }
   .acceso,
   .acceso:nth-child(even),
   .acceso:nth-child(n + 3),
@@ -1167,9 +1175,11 @@ section[id],
   .marca__linea2 { font-size: .95rem; }
   .marca__logo { width: 38px; height: 38px; }
 
-  .hero__titulo { font-size: 2rem; }
-  .hero__contenido { padding-block: 44px 100px; }
-  .hero__puntos { bottom: 74px; }
+  .hero__titulo { font-size: 1.95rem; }
+  .hero__contenido { padding-block: 44px 72px; }
+  .hero__texto { font-size: .94rem; }
+  .hero__puntos { bottom: 28px; }
+  .hero__botones .btn { padding: 12px 18px; font-size: .86rem; }
 
   .titulo-seccion { font-size: 1.6rem; }
   .subtitulo { font-size: .94rem; }
