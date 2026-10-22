@@ -1,0 +1,12 @@
+CARPETA: CONOCERMAS
+
+Fotos extra que se ven en la galeria de las paginas de noticia
+(las que se abren al tocar "Conocer mas").
+
+Ahora mismo:
+  noticia3.1.jpg -> segunda foto de noticia-3.html
+  noticia3.2.jpg -> tercera foto de noticia-3.html
+
+Para agregarle galeria a otra noticia, deja aqui las fotos y
+pidele a Claude que las conecte, o copia el bloque <div class="galeria">
+de noticia-3.html cambiando las rutas.

@@ -1,16 +1,14 @@
 CARPETA: NOTICIAS
 
 Imagenes de las 6 tarjetas del "Canal de noticias".
-Nombres exactos: noticia-1.jpg, noticia-2.jpg, noticia-3.jpg,
-                 noticia-4.jpg, noticia-5.jpg, noticia-6.jpg
+Nombres exactos: noticia-1.jpg ... noticia-6.jpg
 Tamano recomendado: 800 x 500 px aprox.
 
-Orden en la pagina:
-  noticia-1 -> Jornadas de cuidado del barrio
-  noticia-2 -> Encuentros de participacion
-  noticia-3 -> Talleres para la comunidad
-  noticia-4 -> Recreacion para todas las edades
-  noticia-5 -> Cultura que nos une
-  noticia-6 -> Ideas para mejorar Los Alamos
+GALERIA DE LA NOTICIA 3 (noticia-3.html)
+Esa noticia muestra 3 fotos. Faltan estas dos:
+  noticia-3-2.jpg
+  noticia-3-3.jpg
+Solo colocalas aqui con ese nombre exacto y aparecen solas.
 
-Ya estan enlazadas en css/estilos.css (.noticia__img--1 ... --6).
+Para darle galeria a otra noticia se usa el mismo patron:
+  noticia-N-2.jpg, noticia-N-3.jpg, etc.

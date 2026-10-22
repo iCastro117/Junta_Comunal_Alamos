@@ -70,6 +70,31 @@ if (botonMenu && menu) {
 }
 
 /* ============================================================
+   GALERIA DE FOTOS (solo en las noticias que la tengan)
+   Al tocar una miniatura, esa foto pasa a verse en grande.
+   ============================================================ */
+const galeriaMiniaturas = document.getElementById("galeriaMiniaturas");
+const galeriaImagen = document.getElementById("galeriaImagen");
+const galeriaContador = document.getElementById("galeriaContador");
+
+if (galeriaMiniaturas && galeriaImagen) {
+  const miniaturas = Array.from(galeriaMiniaturas.querySelectorAll(".miniatura"));
+
+  miniaturas.forEach(function (miniatura, i) {
+    miniatura.addEventListener("click", function () {
+      galeriaImagen.src = miniatura.dataset.imagen;
+
+      miniaturas.forEach(function (otra) {
+        otra.classList.remove("miniatura--activa");
+      });
+      miniatura.classList.add("miniatura--activa");
+
+      if (galeriaContador) galeriaContador.textContent = i + 1;
+    });
+  });
+}
+
+/* ============================================================
    CARRUSEL (solo corre en la pagina principal)
    ============================================================ */
 const fondo = document.getElementById("heroFondo");

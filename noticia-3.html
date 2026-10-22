@@ -60,7 +60,35 @@
     <div class="contenedor articulo__grid">
 
       <article class="articulo__principal">
-        <img class="articulo__imagen" src="assets/noticias/noticia-3.jpg" alt="Simulacro de Emergencias en Los Álamos" />
+        <!-- Galería: toca una miniatura para verla en grande.
+             Las fotos van en assets/noticias/ -->
+        <div class="galeria">
+
+          <div class="galeria__miniaturas" id="galeriaMiniaturas">
+            <button class="miniatura miniatura--activa" type="button"
+                    data-imagen="assets/noticias/noticia-3.jpg" aria-label="Ver foto 1 de 3">
+              <img src="assets/noticias/noticia-3.jpg" alt="" />
+            </button>
+            <button class="miniatura" type="button"
+                    data-imagen="assets/ConocerMas/noticia3.1.jpg" aria-label="Ver foto 2 de 3">
+              <img src="assets/ConocerMas/noticia3.1.jpg" alt="" />
+            </button>
+            <button class="miniatura" type="button"
+                    data-imagen="assets/ConocerMas/noticia3.2.jpg" aria-label="Ver foto 3 de 3">
+              <img src="assets/ConocerMas/noticia3.2.jpg" alt="" />
+            </button>
+          </div>
+
+          <figure class="galeria__principal">
+            <img class="galeria__imagen" id="galeriaImagen"
+                 src="assets/noticias/noticia-3.jpg"
+                 alt="Simulacro de Emergencias en Los Álamos" />
+            <figcaption class="galeria__contador">
+              <span id="galeriaContador">1</span> / 3
+            </figcaption>
+          </figure>
+
+        </div>
 
         <p class="articulo__meta">Publicado: el 21 de octubre, 2026 por Junta de Acción Comunal Los Álamos</p>
 
