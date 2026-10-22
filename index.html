@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junta de Acción Comunal Los Álamos</title>
+  <meta name="description" content="Junta de Acción Comunal Los Álamos — Participación, solidaridad y bienestar para nuestra comunidad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <!-- ====================== HEADER ====================== -->
+  <header class="header">
+    <div class="contenedor header__inner">
+
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="assets/logo/logo.png" alt="Logo Junta de Acción Comunal Los Álamos" />
+        <span class="marca__texto">
+          <span class="marca__linea1">Junta de Acción Comunal</span>
+          <span class="marca__linea2">Los Álamos</span>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace nav__enlace--activo" href="#inicio">Inicio</a></li>
+          <li><a class="nav__enlace" href="#nuestra-junta">Nuestra Junta</a></li>
+          <li><a class="nav__enlace" href="#noticias">Noticias</a></li>
+          <li><a class="nav__enlace" href="#comunidad">Comunidad</a></li>
+        </ul>
+        <a class="btn btn--verde" href="#ubicacion">
+          Contáctanos
+          <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+        </a>
+      </nav>
+
+      <button class="menu-movil" type="button" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ====================== HERO / BANNER ====================== -->
+  <section class="hero" id="inicio">
+
+    <div class="hero__slide hero__slide--1" id="heroFondo"></div>
+    <div class="hero__velo"></div>
+
+    <div class="contenedor hero__contenido" id="heroTextos">
+      <h1 class="hero__titulo" id="heroTitulo">Juntos<br />construimos<br />un mejor barrio</h1>
+      <p class="hero__texto" id="heroTexto">
+        Participación, solidaridad y bienestar<br />
+        para nuestra comunidad.
+      </p>
+      <div class="hero__botones">
+        <a class="btn btn--blanco" href="#nuestra-junta">
+          Conoce nuestra Junta
+          <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+        </a>
+        <a class="btn btn--borde" href="#noticias">Ver noticias</a>
+      </div>
+    </div>
+
+    <!-- Controles del carrusel -->
+    <button class="hero__flecha hero__flecha--izq" id="heroAnterior" type="button" aria-label="Banner anterior">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button class="hero__flecha hero__flecha--der" id="heroSiguiente" type="button" aria-label="Banner siguiente">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <div class="hero__puntos" id="heroPuntos">
+      <button class="punto punto--activo" type="button" aria-label="Ir al banner 1"></button>
+      <button class="punto" type="button" aria-label="Ir al banner 2"></button>
+      <button class="punto" type="button" aria-label="Ir al banner 3"></button>
+      <button class="punto" type="button" aria-label="Ir al banner 4"></button>
+    </div>
+  </section>
+
+  <!-- ====================== ACCESOS RÁPIDOS ====================== -->
+  <section class="accesos-wrap">
+    <div class="contenedor">
+      <div class="accesos">
+
+        <a class="acceso" href="#nuestra-junta">
+          <span class="acceso__icono">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/>
+              <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><path d="M15 14.4c2.6-.3 5 1.6 5 4.6"/>
+            </svg>
+          </span>
+          <span class="acceso__texto">
+            <strong>Nuestra Junta</strong>
+            <small>Conoce quiénes somos</small>
+          </span>
+        </a>
+
+        <a class="acceso" href="#noticias">
+          <span class="acceso__icono">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="3.5" width="16" height="17" rx="2.5"/>
+              <path d="M8 8h8M8 12h8M8 16h5"/>
+            </svg>
+          </span>
+          <span class="acceso__texto">
+            <strong>Noticias</strong>
+            <small>Infórmate de las novedades</small>
+          </span>
+        </a>
+
+        <a class="acceso" href="#comunidad">
+          <span class="acceso__icono">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="5" width="17" height="15" rx="2.5"/>
+              <path d="M3.5 10h17M8 3.5v3M16 3.5v3"/>
+            </svg>
+          </span>
+          <span class="acceso__texto">
+            <strong>Actividades</strong>
+            <small>Participa en tu comunidad</small>
+          </span>
+        </a>
+
+        <a class="acceso" href="#ubicacion">
+          <span class="acceso__icono">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </span>
+          <span class="acceso__texto">
+            <strong>Contáctanos</strong>
+            <small>Comparte tus ideas</small>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== NUESTRA JUNTA ====================== -->
+  <section class="bienestar" id="nuestra-junta">
+    <div class="contenedor bienestar__grid">
+
+      <div class="bienestar__izq">
+        <h2 class="titulo-seccion">Unidos por el bienestar<br />de Los Álamos</h2>
+        <p class="bienestar__parrafo">
+          Promovemos la participación de nuestros vecinos y el trabajo
+          colectivo para mejorar la convivencia y cuidar nuestro barrio.
+        </p>
+        <a class="btn btn--verde btn--grande" href="#comunidad">
+          Súmate a la Junta
+          <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+        </a>
+      </div>
+
+      <ul class="valores">
+        <li class="valor">
+          <span class="valor__icono">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/>
+              <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><path d="M15 14.4c2.6-.3 5 1.6 5 4.6"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Encuentros vecinales</h3>
+            <p>Espacios para escuchar, compartir ideas y construir acuerdos.</p>
+          </div>
+        </li>
+
+        <li class="valor">
+          <span class="valor__icono">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 4.5 22 9l-10 4.5L2 9l10-4.5z"/><path d="M6 11v4.5c0 1.7 2.7 3 6 3s6-1.3 6-3V11"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Cultura y formación</h3>
+            <p>Actividades que conectan generaciones y promueven el aprendizaje.</p>
+          </div>
+        </li>
+
+        <li class="valor">
+          <span class="valor__icono">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21v-7"/>
+              <path d="M12 14c0-4 3-7 8-7 0 5-3 8-8 7z"/>
+              <path d="M12 17c0-3-2.3-5.5-6-5.5 0 3.8 2.3 6 6 5.5z"/>
+            </svg>
+          </span>
+          <div>
+            <h3>Cuidado del entorno</h3>
+            <p>Acciones comunitarias por un barrio limpio, verde y sostenible.</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ====================== CANAL DE NOTICIAS ====================== -->
+  <section class="canal" id="noticias">
+    <div class="contenedor">
+
+      <div class="canal__encabezado">
+        <span class="sobretitulo">Actualidad del barrio</span>
+        <h2 class="titulo-seccion">Canal de noticias</h2>
+        <p class="subtitulo">Un espacio para informar, participar y encontrarnos.</p>
+      </div>
+
+      <!-- Filtros (decorativos por ahora) -->
+      <div class="filtros">
+        <button class="filtro filtro--activo" type="button">Todas</button>
+        <button class="filtro" type="button">Comunidad</button>
+        <button class="filtro" type="button">Actividades</button>
+        <button class="filtro" type="button">Comunicados</button>
+      </div>
+
+      <div class="grid-noticias">
+
+        <article class="noticia">
+          <div class="noticia__img noticia__img--1"></div>
+          <div class="noticia__cuerpo">
+            <h3 class="noticia__titulo">Día Dulces de los Niños</h3>
+            <p class="noticia__texto">La Junta de Acción Comunal Los Álamos invita a las familias a compartir una tarde de disfraces, dulces y diversión.
+Los esperamos el 30 de octubre, de 5:00 p. m. a 8:00 p. m., en nuestra sede comunal.</p>
+          </div>
+          <div class="noticia__pie">
+            <span class="noticia__fecha">30 de octubre</span>
+            <a class="enlace-mas" href="noticia-1.html">Conocer más
+              <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="noticia">
+          <div class="noticia__img noticia__img--2"></div>
+          <div class="noticia__cuerpo">
+            <h3 class="noticia__titulo">Jornada de Vacunación Distrital</h3>
+            <p class="noticia__texto">Este 25 de octubre tendremos una jornada gratuita de vacunación contra la rabia para perros y gatos en el Salón Comunal Los Álamos.
+Te esperamos de 9:00 a. m. a 4:00 p. m. en la calle 66A # 97-64. ¡Trae a tu mascota y protege su salud!</p>
+          </div>
+          <div class="noticia__pie">
+            <span class="noticia__fecha">25 de octubre</span>
+            <a class="enlace-mas" href="noticia-2.html">Conocer más
+              <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="noticia">
+          <div class="noticia__img noticia__img--3"></div>
+          <div class="noticia__cuerpo">
+            <h3 class="noticia__titulo">Simulacro de Emergencias en Los Álamos</h3>
+            <p class="noticia__texto">
+Así se vivió el Simulacro de Emergencias 2026 en Los Álamos: una jornada de participación y aprendizaje para nuestra comunidad.
+Este 21 de octubre nos unimos para practicar cómo actuar ante una emergencia y fortalecer el cuidado de todos.
+
+</p>
+          </div>
+          <div class="noticia__pie">
+            <span class="noticia__fecha">21 de octubre</span>
+            <a class="enlace-mas" href="noticia-3.html">Conocer más
+              <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="noticia">
+          <div class="noticia__img noticia__img--4"></div>
+          <div class="noticia__cuerpo">
+            <h3 class="noticia__titulo">Viejoteca del año</h3>
+            <p class="noticia__texto">Este 7 de noviembre, el Salón Comunal de Los Álamos se llenará de música, baile y recuerdos con una viejoteca para compartir entre vecinos y amigos.
+¡Reserva la fecha y prepárate para disfrutar! Pronto compartiremos más información.</p>
+          </div>
+          <div class="noticia__pie">
+             <span class="noticia__fecha">7 de noviembre</span>
+            <a class="enlace-mas" href="noticia-4.html">Conocer más
+              <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="noticia">
+          <div class="noticia__img noticia__img--5"></div>
+          <div class="noticia__cuerpo">
+            <h3 class="noticia__titulo">Jornada gratuita de tamizaje</h3>
+            <p class="noticia__texto">
+La JAC Los Álamos abre inscripciones para su taller de velas navideñas artesanales este 3 de noviembre.
+Aprende técnicas de diseño y decoración para crear tus propias velas. ¡Más información e inscripciones al 3107833829!.</p>
+          </div>
+          <div class="noticia__pie">
+            <span class="noticia__fecha">20 de octubre</span>
+            <a class="enlace-mas" href="noticia-5.html">Conocer más
+              <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="noticia">
+          <div class="noticia__img noticia__img--6"></div>
+          <div class="noticia__cuerpo">
+            <h3 class="noticia__titulo">Taller Navideño</h3>
+            <p class="noticia__texto"> 
+Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a elaborar y decorar velas navideñas artesanales.
+¡Las inscripciones ya están abiertas! Participa y crea tus propios diseños. Más información al 3107833829.</p>
+          </div>
+          <div class="noticia__pie">
+            <span class="noticia__fecha">3 de noviembre</span>
+            <a class="enlace-mas" href="noticia-6.html">Conocer más
+              <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="canal__accion">
+        <a class="btn btn--verde" href="#noticias">
+          Ver todas las noticias
+          <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================== CONÉCTATE / REDES ====================== -->
+  <section class="conectate" id="comunidad">
+    <div class="contenedor">
+
+      <div class="canal__encabezado">
+        <h2 class="titulo-seccion">Conéctate con Los Álamos</h2>
+        <p class="subtitulo">Entérate de las novedades y participa en la conversación.</p>
+      </div>
+
+      <div class="grid-redes">
+
+        <article class="tarjeta-red">
+          <div class="tarjeta-red__top">
+            <span class="tarjeta-red__icono">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+                <path d="M13.2 19v-6h2l.3-2.4h-2.3V9.1c0-.7.2-1.2 1.2-1.2h1.2V5.8c-.2 0-.9-.1-1.8-.1-1.8 0-3 1.1-3 3.1v1.8H8.6V13h2.2v6h2.4z" fill="#fff"/>
+              </svg>
+            </span>
+            <strong>Facebook</strong>
+          </div>
+          <div class="tarjeta-red__img tarjeta-red__img--fb"></div>
+          <p class="tarjeta-red__nota">Espacio para el canal oficial.</p>
+          <a class="btn btn--claro" href="#comunidad">
+            Visitar Facebook
+            <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+          </a>
+        </article>
+
+        <article class="tarjeta-red">
+          <div class="tarjeta-red__top">
+            <span class="tarjeta-red__icono">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <defs>
+                  <linearGradient id="gradIg" x1="0" y1="1" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#FDB63B"/>
+                    <stop offset="45%" stop-color="#E6413B"/>
+                    <stop offset="100%" stop-color="#9C2EBD"/>
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="0" width="24" height="24" rx="7" fill="url(#gradIg)"/>
+                <rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="#fff" stroke-width="1.7"/>
+                <circle cx="12" cy="12" r="3.2" fill="none" stroke="#fff" stroke-width="1.7"/>
+                <circle cx="16.3" cy="7.7" r="1" fill="#fff"/>
+              </svg>
+            </span>
+            <strong>Instagram</strong>
+          </div>
+          <div class="tarjeta-red__img tarjeta-red__img--ig"></div>
+          <p class="tarjeta-red__nota">Espacio para el canal oficial.</p>
+          <a class="btn btn--claro" href="#comunidad">
+            Ver Instagram
+            <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+          </a>
+        </article>
+
+        <article class="tarjeta-red">
+          <div class="tarjeta-red__top">
+            <span class="tarjeta-red__icono">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="12" fill="#25D366"/>
+                <path d="M12 5.2A6.8 6.8 0 0 0 6.1 15.4L5.4 18.6l3.3-.86A6.8 6.8 0 1 0 12 5.2zm3.9 9.4c-.16.46-.94.9-1.3.94-.33.03-.75.05-1.21-.08-.28-.09-.64-.21-1.1-.41-1.94-.84-3.2-2.78-3.3-2.91-.1-.13-.79-1.05-.79-2s.5-1.42.68-1.61a.71.71 0 0 1 .51-.24h.37c.12 0 .28-.04.44.33.16.4.55 1.36.6 1.46.05.1.08.21.01.34-.06.13-.1.21-.2.32l-.29.34c-.1.1-.2.2-.08.4.11.2.5.84 1.09 1.36.75.67 1.39.88 1.59.98.2.1.31.08.43-.05.12-.13.49-.57.62-.77.13-.2.26-.16.43-.1.18.07 1.12.53 1.31.63.2.1.32.14.37.22.05.09.05.5-.11.95z" fill="#fff"/>
+              </svg>
+            </span>
+            <strong>Canal de WhatsApp</strong>
+          </div>
+          <div class="tarjeta-red__img tarjeta-red__img--wa"></div>
+          <p class="tarjeta-red__nota">Espacio para el canal oficial.</p>
+          <a class="btn btn--claro" href="#comunidad">
+            Unirme al canal
+            <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== ESTAMOS CERCA DE TI ====================== -->
+  <section class="cerca" id="ubicacion">
+    <div class="contenedor">
+
+      <div class="cerca__encabezado">
+        <h2 class="titulo-seccion">Estamos cerca de ti</h2>
+        <p class="subtitulo">Conversemos sobre las ideas y necesidades de nuestro barrio.</p>
+        <span class="raya"></span>
+      </div>
+
+      <div class="cerca__grid">
+
+        <!-- Columna izquierda: datos + mapa -->
+        <div class="visitanos">
+          <h3 class="visitanos__titulo">Visítanos y participa</h3>
+          <p class="visitanos__nota">Un espacio para escucharnos y construir comunidad.</p>
+
+          <ul class="datos">
+            <li class="dato">
+              <span class="dato__icono">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-10.5A7 7 0 0 0 5 10.5C5 15.4 12 21 12 21z"/><circle cx="12" cy="10.3" r="2.6"/></svg>
+              </span>
+              <div>
+                <strong>Dirección</strong>
+                <span>Calle 66A # 97 – 64</span>
+              </div>
+            </li>
+
+            <li class="dato">
+              <span class="dato__icono">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5z"/></svg>
+              </span>
+              <div>
+                <strong>Teléfono</strong>
+                <span>321 233 2502</span>
+              </div>
+            </li>
+
+            <li class="dato">
+              <span class="dato__icono">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/>
+                  <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><path d="M15 14.4c2.6-.3 5 1.6 5 4.6"/>
+                </svg>
+              </span>
+              <div>
+                <strong>Atención presencial</strong>
+                <span>Comunícate con nosotros para confirmar horarios.</span>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Mapa de Google: Calle 66A # 97-64, Bogotá, Colombia -->
+          <div class="mapa">
+            <iframe
+              class="mapa__marco"
+              src="https://www.google.com/maps?q=Calle%2066A%20%2397-64,%20Bogot%C3%A1,%20Colombia&amp;z=16&amp;output=embed"
+              title="Mapa de la Junta de Acción Comunal Los Álamos"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+
+          <a class="btn btn--claro btn--mapa"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2066A%20%2397-64,%20Bogot%C3%A1,%20Colombia"
+             target="_blank" rel="noopener">
+            <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-10.5A7 7 0 0 0 5 10.5C5 15.4 12 21 12 21z"/><circle cx="12" cy="10.3" r="2.6"/></svg>
+            Consultar ubicación
+          </a>
+        </div>
+
+        <!-- Columna derecha: formulario -->
+        <div class="formulario">
+          <h3 class="formulario__titulo">Contáctanos</h3>
+          <p class="formulario__nota">Comparte tus ideas, consultas o solicitudes.</p>
+
+          <form class="formulario__campos">
+            <div class="campo">
+              <label for="c-nombre">Nombre completo</label>
+              <span class="campo__control">
+                <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.3"/><path d="M5 19.5c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5"/></svg>
+                <input type="text" id="c-nombre" name="nombre" placeholder="Tu nombre completo" />
+              </span>
+            </div>
+
+            <div class="campo">
+              <label for="c-telefono">Número de teléfono</label>
+              <span class="campo__control">
+                <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5z"/></svg>
+                <input type="tel" id="c-telefono" name="telefono" placeholder="Tu número de teléfono" />
+              </span>
+            </div>
+
+            <div class="campo">
+              <label for="c-correo">Correo electrónico</label>
+              <span class="campo__control">
+                <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m3.6 7 8.4 6 8.4-6"/></svg>
+                <input type="email" id="c-correo" name="correo" placeholder="Tu correo electrónico" />
+              </span>
+            </div>
+
+            <div class="campo">
+              <label for="c-asunto">Asunto</label>
+              <span class="campo__control">
+                <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h4"/></svg>
+                <input type="text" id="c-asunto" name="asunto" placeholder="¿Sobre qué deseas escribirnos?" />
+              </span>
+            </div>
+
+            <div class="campo campo--ancho">
+              <label for="c-mensaje">Descripción o mensaje</label>
+              <span class="campo__control campo__control--area">
+                <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 12.5c0 3.9-3.8 7-8.5 7-1 0-2-.15-2.9-.42L4 20.5l1.5-3.6A6.6 6.6 0 0 1 3.5 12.5c0-3.87 3.8-7 8.5-7s8.5 3.13 8.5 7z"/></svg>
+                <textarea id="c-mensaje" name="mensaje" rows="5" placeholder="Cuéntanos tu idea, consulta o solicitud..."></textarea>
+              </span>
+            </div>
+
+            <label class="acepto campo--ancho" for="c-datos">
+              <input type="checkbox" id="c-datos" name="datos" />
+              <span>Autorizo el tratamiento de mis datos personales.</span>
+            </label>
+
+            <button class="btn btn--verde btn--bloque campo--ancho" type="submit">
+              Enviar mensaje
+              <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== PIE DE PÁGINA ====================== -->
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+
+      <div class="pie__marca">
+        <img class="pie__logo" src="assets/logo/logo.png" alt="Logo Junta de Acción Comunal Los Álamos" />
+        <div>
+          <p class="pie__nombre">
+            <strong>Junta de Acción Comunal</strong>
+            <span>Los Álamos</span>
+          </p>
+          <p class="pie__lema">Participación y solidaridad<br />para nuestro barrio.</p>
+        </div>
+      </div>
+
+      <div class="pie__col">
+        <h4>Enlaces de interés</h4>
+        <ul class="pie__enlaces">
+          <li><a href="#nuestra-junta">Nuestra Junta <span class="chevron">›</span></a></li>
+          <li><a href="#noticias">Noticias <span class="chevron">›</span></a></li>
+          <li><a href="#comunidad">Actividades <span class="chevron">›</span></a></li>
+          <li><a href="#nuestra-junta">Proyectos <span class="chevron">›</span></a></li>
+        </ul>
+      </div>
+
+      <div class="pie__col">
+        <h4>Contacto</h4>
+        <ul class="pie__datos">
+          <li>
+            <span class="pie__icono">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-10.5A7 7 0 0 0 5 10.5C5 15.4 12 21 12 21z"/><circle cx="12" cy="10.3" r="2.6"/></svg>
+            </span>
+            Calle 66A # 97 – 64
+          </li>
+          <li>
+            <span class="pie__icono">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5z"/></svg>
+            </span>
+            321 233 2502
+          </li>
+          <li>
+            <span class="pie__icono">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m3.6 7 8.4 6 8.4-6"/></svg>
+            </span>
+            juntadeaccioncomunallosalamos@gmail.com
+          </li>
+        </ul>
+
+        <div class="pie__redes">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M21 3H3a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 3 21h9.6v-6.8h-2.3v-2.7h2.3V9.6c0-2.3 1.4-3.5 3.4-3.5.98 0 1.82.07 2.06.1v2.4h-1.42c-1.1 0-1.32.53-1.32 1.3v1.6h2.65l-.35 2.7h-2.3V21H21a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 21 3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.4" cy="6.6" r="1.2" fill="#fff" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M12.04 2.2C6.6 2.2 2.2 6.6 2.2 12.04c0 1.73.45 3.42 1.32 4.91L2.1 22l5.2-1.37a9.8 9.8 0 0 0 4.74 1.2h.01c5.43 0 9.84-4.4 9.84-9.84 0-2.63-1.03-5.1-2.89-6.96a9.76 9.76 0 0 0-6.96-2.88zm4.5 13.9c-.25.49-1.1.95-1.5 1-.4.04-.9.06-1.44-.09a12.9 12.9 0 0 1-1.3-.48c-2.3-1-3.8-3.3-3.92-3.46-.11-.15-.94-1.25-.94-2.38 0-1.13.6-1.69.81-1.92.21-.23.46-.29.61-.29h.44c.14 0 .33-.5.52.4.19.45.65 1.6.71 1.72.06.11.1.25.02.4-.07.15-.11.25-.23.38l-.34.4c-.11.12-.23.25-.1.48.13.23.6 1 1.3 1.62.88.78 1.63 1.03 1.86 1.15.23.11.37.09.5-.06.14-.15.58-.68.74-.91.15-.23.31-.19.52-.11.21.08 1.33.63 1.56.74.23.12.38.17.44.27.06.1.06.58-.19 1.07z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pie__legal">
+      <div class="contenedor pie__legal-inner">
+        <span>Junta de Acción Comunal Los Álamos</span>
+        <a href="#ubicacion">Tratamiento de datos personales</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Configuración local de herramientas (no hace parte del sitio web)
+.claude/
+
+# Archivos del sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Contexto local de Claude Code
+CLAUDE.md

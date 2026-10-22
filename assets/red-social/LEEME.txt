@@ -1,0 +1,10 @@
+CARPETA: RED SOCIAL
+
+1) ICONOS del pie / tarjetas (ya incluidos):
+   facebook.svg, instagram.svg, whatsapp.svg, youtube.svg
+
+2) FOTOS de la seccion "Conectate con Los Alamos":
+   facebook.jpg, instagram.jpg, whatsapp.jpg
+   Tamano recomendado: 700 x 450 px aprox.
+
+Enlazadas en css/estilos.css (.tarjeta-red__img--fb, --ig, --wa).

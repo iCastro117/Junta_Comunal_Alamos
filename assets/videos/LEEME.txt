@@ -1,0 +1,8 @@
+CARPETA: VIDEOS
+
+Video de la seccion "Tu voz hace parte de Los Alamos".
+Nombres exactos: presentacion.mp4  y  portada-video.jpg
+
+Enlazados en index.html:
+  <video poster="assets/videos/portada-video.jpg">
+    <source src="assets/videos/presentacion.mp4" type="video/mp4">

@@ -1,0 +1,8 @@
+CARPETA: BANNER
+
+Imagenes del carrusel principal (hero).
+Nombres exactos: banner-1.jpg, banner-2.jpg, banner-3.jpg, banner-4.jpg
+Tamano recomendado: 1920 x 900 px aprox.
+
+Los textos de cada banner se cambian en js/script.js,
+en la lista "banners" que esta al comienzo del archivo.
