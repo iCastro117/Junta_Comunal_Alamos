@@ -3,12 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Seguridad: politica de contenido y privacidad del navegador -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; form-action 'self'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+  <!-- Identidad del sitio -->
+  <meta name="theme-color" content="#11482A" />
+  <meta name="author" content="Junta de Acción Comunal Los Álamos" />
+  <link rel="canonical" href="https://icastro117.github.io/Junta_Comunal_Alamos/index.html" />
+  <link rel="icon" href="assets/logo/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo/logo.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <!-- Vista previa al compartir el enlace -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Junta de Acción Comunal Los Álamos" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:title" content="Junta de Acción Comunal Los Álamos" />
+  <meta property="og:description" content="Junta de Acción Comunal Los Álamos — Participación, solidaridad y bienestar para nuestra comunidad." />
+  <meta property="og:url" content="https://icastro117.github.io/Junta_Comunal_Alamos/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Junta de Acción Comunal Los Álamos</title>
   <meta name="description" content="Junta de Acción Comunal Los Álamos — Participación, solidaridad y bienestar para nuestra comunidad." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/estilos.css" />
+
+  <!-- Datos estructurados (JSON-LD) para buscadores -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GovernmentOrganization",
+    "name": "Junta de Acción Comunal Barrio Los Álamos",
+    "alternateName": "JAC Los Álamos",
+    "url": "https://icastro117.github.io/Junta_Comunal_Alamos/",
+    "logo": "https://icastro117.github.io/Junta_Comunal_Alamos/assets/logo/logo.png",
+    "description": "Organización comunal del barrio Los Álamos. Participación, solidaridad y bienestar para la comunidad.",
+    "areaServed": "Barrio Los Álamos, Bogotá D.C.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 66A # 97 - 64",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Bogotá D.C.",
+      "addressCountry": "CO"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+57-321-233-2502",
+      "email": "juntadeaccioncomunallosalamos@gmail.com",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -212,16 +262,16 @@
       </div>
 
       <!-- Filtros (decorativos por ahora) -->
-      <div class="filtros">
-        <button class="filtro filtro--activo" type="button">Todas</button>
-        <button class="filtro" type="button">Comunidad</button>
-        <button class="filtro" type="button">Actividades</button>
-        <button class="filtro" type="button">Comunicados</button>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar noticias por categoría">
+        <button class="filtro filtro--activo" type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+        <button class="filtro" type="button" data-filtro="comunidad" aria-pressed="false">Comunidad</button>
+        <button class="filtro" type="button" data-filtro="actividades" aria-pressed="false">Actividades</button>
+        <button class="filtro" type="button" data-filtro="comunicados" aria-pressed="false">Comunicados</button>
       </div>
 
-      <div class="grid-noticias">
+      <div class="grid-noticias" id="gridNoticias">
 
-        <a class="noticia" href="noticia-1.html">
+        <a class="noticia" href="noticia-1.html" data-categoria="actividades">
           <div class="noticia__img noticia__img--1"></div>
           <div class="noticia__cuerpo">
             <h3 class="noticia__titulo">Día Dulces de los Niños</h3>
@@ -236,7 +286,7 @@ Los esperamos el 30 de octubre, de 5:00 p. m. a 8:00 p. m., en nuestra sede comu
           </div>
         </a>
 
-        <a class="noticia" href="noticia-2.html">
+        <a class="noticia" href="noticia-2.html" data-categoria="comunicados">
           <div class="noticia__img noticia__img--2"></div>
           <div class="noticia__cuerpo">
             <h3 class="noticia__titulo">Jornada de Vacunación Distrital</h3>
@@ -251,7 +301,7 @@ Te esperamos de 9:00 a. m. a 4:00 p. m. en la calle 66A # 97-64. ¡Trae a tu mas
           </div>
         </a>
 
-        <a class="noticia" href="noticia-3.html">
+        <a class="noticia" href="noticia-3.html" data-categoria="comunidad">
           <div class="noticia__img noticia__img--3"></div>
           <div class="noticia__cuerpo">
             <h3 class="noticia__titulo">Simulacro de Emergencias en Los Álamos</h3>
@@ -269,7 +319,7 @@ Este 21 de octubre nos unimos para practicar cómo actuar ante una emergencia y 
           </div>
         </a>
 
-        <a class="noticia" href="noticia-4.html">
+        <a class="noticia" href="noticia-4.html" data-categoria="actividades">
           <div class="noticia__img noticia__img--4"></div>
           <div class="noticia__cuerpo">
             <h3 class="noticia__titulo">Viejoteca del año</h3>
@@ -284,7 +334,7 @@ Este 21 de octubre nos unimos para practicar cómo actuar ante una emergencia y 
           </div>
         </a>
 
-        <a class="noticia" href="noticia-5.html">
+        <a class="noticia" href="noticia-5.html" data-categoria="comunicados">
           <div class="noticia__img noticia__img--5"></div>
           <div class="noticia__cuerpo">
             <h3 class="noticia__titulo">Jornada gratuita de tamizaje</h3>
@@ -299,7 +349,7 @@ Habrá pruebas confidenciales de VIH, sífilis y hepatitis B para mayores de 16 
           </div>
         </a>
 
-        <a class="noticia" href="noticia-6.html">
+        <a class="noticia" href="noticia-6.html" data-categoria="actividades">
           <div class="noticia__img noticia__img--6"></div>
           <div class="noticia__cuerpo">
             <h3 class="noticia__titulo">Taller Navideño</h3>
@@ -481,12 +531,12 @@ Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a ela
           <h3 class="formulario__titulo">Contáctanos</h3>
           <p class="formulario__nota">Comparte tus ideas, consultas o solicitudes.</p>
 
-          <form class="formulario__campos">
+          <form class="formulario__campos" id="formContacto" novalidate>
             <div class="campo">
               <label for="c-nombre">Nombre completo</label>
               <span class="campo__control">
                 <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.3"/><path d="M5 19.5c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5"/></svg>
-                <input type="text" id="c-nombre" name="nombre" placeholder="Tu nombre completo" />
+                <input type="text" id="c-nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" maxlength="80" required />
               </span>
             </div>
 
@@ -494,7 +544,7 @@ Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a ela
               <label for="c-telefono">Número de teléfono</label>
               <span class="campo__control">
                 <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5z"/></svg>
-                <input type="tel" id="c-telefono" name="telefono" placeholder="Tu número de teléfono" />
+                <input type="tel" id="c-telefono" name="telefono" placeholder="Tu número de teléfono" autocomplete="tel" inputmode="tel" maxlength="20" />
               </span>
             </div>
 
@@ -502,7 +552,7 @@ Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a ela
               <label for="c-correo">Correo electrónico</label>
               <span class="campo__control">
                 <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m3.6 7 8.4 6 8.4-6"/></svg>
-                <input type="email" id="c-correo" name="correo" placeholder="Tu correo electrónico" />
+                <input type="email" id="c-correo" name="correo" placeholder="Tu correo electrónico" autocomplete="email" maxlength="120" required />
               </span>
             </div>
 
@@ -510,7 +560,7 @@ Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a ela
               <label for="c-asunto">Asunto</label>
               <span class="campo__control">
                 <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h4"/></svg>
-                <input type="text" id="c-asunto" name="asunto" placeholder="¿Sobre qué deseas escribirnos?" />
+                <input type="text" id="c-asunto" name="asunto" placeholder="¿Sobre qué deseas escribirnos?" maxlength="120" required />
               </span>
             </div>
 
@@ -518,15 +568,16 @@ Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a ela
               <label for="c-mensaje">Descripción o mensaje</label>
               <span class="campo__control campo__control--area">
                 <svg class="campo__icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 12.5c0 3.9-3.8 7-8.5 7-1 0-2-.15-2.9-.42L4 20.5l1.5-3.6A6.6 6.6 0 0 1 3.5 12.5c0-3.87 3.8-7 8.5-7s8.5 3.13 8.5 7z"/></svg>
-                <textarea id="c-mensaje" name="mensaje" rows="5" placeholder="Cuéntanos tu idea, consulta o solicitud..."></textarea>
+                <textarea id="c-mensaje" name="mensaje" rows="5" maxlength="1500" placeholder="Cuéntanos tu idea, consulta o solicitud..." required></textarea>
               </span>
             </div>
 
             <label class="acepto campo--ancho" for="c-datos">
-              <input type="checkbox" id="c-datos" name="datos" />
-              <span>Autorizo el tratamiento de mis datos personales.</span>
+              <input type="checkbox" id="c-datos" name="datos" required />
+              <span>Autorizo el <a href="politica-de-privacidad.html" target="_blank" rel="noopener">tratamiento de mis datos personales</a>.</span>
             </label>
 
+            <p class="aviso-form campo--ancho" id="avisoForm" role="status" hidden></p>
             <button class="btn btn--verde btn--bloque campo--ancho" type="submit">
               Enviar mensaje
               <svg class="icono-flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m0 0-5-5m5 5-5 5"/></svg>
@@ -604,7 +655,8 @@ Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a ela
     <div class="pie__legal">
       <div class="contenedor pie__legal-inner">
         <span>Junta de Acción Comunal Los Álamos</span>
-        <a href="#ubicacion">Tratamiento de datos personales</a>
+        <a href="politica-de-privacidad.html">Tratamiento de datos personales</a>
+        <a href="terminos-y-condiciones.html">Términos y condiciones</a>
       </div>
     </div>
   </footer>

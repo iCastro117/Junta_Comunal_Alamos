@@ -70,6 +70,124 @@ if (botonMenu && menu) {
 }
 
 /* ============================================================
+   FILTROS DEL CANAL DE NOTICIAS (solo en la pagina principal)
+   Cada tarjeta lleva data-categoria y cada boton data-filtro.
+   ============================================================ */
+const filtros = document.getElementById("filtros");
+const gridNoticias = document.getElementById("gridNoticias");
+
+if (filtros && gridNoticias) {
+  const botones = Array.from(filtros.querySelectorAll(".filtro"));
+  const tarjetas = Array.from(gridNoticias.querySelectorAll(".noticia"));
+
+  filtros.addEventListener("click", function (evento) {
+    const boton = evento.target.closest(".filtro");
+    if (!boton) return;
+
+    const elegida = boton.dataset.filtro;
+
+    /* Marca el boton activo */
+    botones.forEach(function (otro) {
+      const activo = otro === boton;
+      otro.classList.toggle("filtro--activo", activo);
+      otro.setAttribute("aria-pressed", activo ? "true" : "false");
+    });
+
+    /* Muestra solo las tarjetas de esa categoria */
+    tarjetas.forEach(function (tarjeta) {
+      const coincide = elegida === "todas" || tarjeta.dataset.categoria === elegida;
+      tarjeta.classList.toggle("noticia--oculta", !coincide);
+    });
+  });
+}
+
+/* ============================================================
+   FORMULARIO DE CONTACTO
+   El sitio no tiene servidor, asi que el envio se arma como un
+   correo con los datos ya escritos. Ver INFRAESTRUCTURA.md si se
+   quiere que el envio quede automatico.
+   ============================================================ */
+const CORREO_JUNTA = "juntadeaccioncomunallosalamos@gmail.com";
+
+const formContacto = document.getElementById("formContacto");
+const avisoForm = document.getElementById("avisoForm");
+
+if (formContacto && avisoForm) {
+
+  function mostrarAviso(texto, tipo) {
+    avisoForm.textContent = texto;
+    avisoForm.className = "aviso-form campo--ancho aviso-form--" + tipo;
+    avisoForm.hidden = false;
+  }
+
+  formContacto.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+
+    const nombre = formContacto.querySelector("#c-nombre");
+    const correo = formContacto.querySelector("#c-correo");
+    const telefono = formContacto.querySelector("#c-telefono");
+    const asunto = formContacto.querySelector("#c-asunto");
+    const mensaje = formContacto.querySelector("#c-mensaje");
+    const datos = formContacto.querySelector("#c-datos");
+
+    /* Validacion campo por campo */
+    if (!nombre.value.trim()) {
+      mostrarAviso("Escribe tu nombre completo.", "error");
+      nombre.focus();
+      return;
+    }
+
+    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(correo.value.trim());
+    if (!correoValido) {
+      mostrarAviso("Revisa tu correo electrónico: no parece válido.", "error");
+      correo.focus();
+      return;
+    }
+
+    if (!asunto.value.trim()) {
+      mostrarAviso("Cuéntanos de qué se trata en el asunto.", "error");
+      asunto.focus();
+      return;
+    }
+
+    if (mensaje.value.trim().length < 10) {
+      mostrarAviso("El mensaje es muy corto. Escríbenos un poco más.", "error");
+      mensaje.focus();
+      return;
+    }
+
+    if (!datos.checked) {
+      mostrarAviso("Necesitamos tu autorización para tratar los datos.", "error");
+      datos.focus();
+      return;
+    }
+
+    /* Se arma el correo con todo lo escrito */
+    const cuerpo =
+      "Nombre: " + nombre.value.trim() + "\n" +
+      "Correo: " + correo.value.trim() + "\n" +
+      "Teléfono: " + (telefono.value.trim() || "No indicado") + "\n\n" +
+      "Mensaje:\n" + mensaje.value.trim() + "\n\n" +
+      "---\n" +
+      "Enviado desde el sitio web de la JAC Los Álamos.\n" +
+      "El remitente autorizó el tratamiento de sus datos personales.";
+
+    const enlace =
+      "mailto:" + CORREO_JUNTA +
+      "?subject=" + encodeURIComponent("[Web] " + asunto.value.trim()) +
+      "&body=" + encodeURIComponent(cuerpo);
+
+    window.location.href = enlace;
+
+    mostrarAviso(
+      "Abrimos tu correo con el mensaje listo. Si no se abrió, escríbenos a " +
+      CORREO_JUNTA,
+      "ok"
+    );
+  });
+}
+
+/* ============================================================
    GALERIA DE FOTOS (solo en las noticias que la tengan)
    Al tocar una miniatura, esa foto pasa a verse en grande.
    ============================================================ */

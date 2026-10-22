@@ -1,0 +1,133 @@
+{
+  "$comentario": "Fuente de datos de las noticias y los cobros. El cobro de cada evento vive dentro de su propia pagina de noticia, no en el index. Hoy el sitio es HTML estatico y no lee este archivo en caliente; sirve como fuente unica de verdad.",
+  "version": "1.0",
+  "actualizado": "2026-10-22",
+  "organizacion": {
+    "nombre": "Junta de Acción Comunal Barrio Los Álamos",
+    "sigla": "JAC Los Álamos",
+    "nit": null,
+    "direccion": "Calle 66A # 97 - 64",
+    "ciudad": "Bogotá D.C.",
+    "pais": "Colombia",
+    "correo": "juntadeaccioncomunallosalamos@gmail.com",
+    "telefono": "+57 321 233 2502"
+  },
+  "noticias": [
+    {
+      "id": 1,
+      "slug": "dia-dulces-de-los-ninos",
+      "titulo": "Día Dulces de los Niños",
+      "categoria": "actividades",
+      "fecha": "2026-10-30",
+      "fechaTexto": "30 de octubre",
+      "resumen": "La Junta de Acción Comunal Los Álamos invita a las familias a compartir una tarde de disfraces, dulces y diversión.",
+      "detalle": "Los esperamos el 30 de octubre, de 5:00 p. m. a 8:00 p. m., en nuestra sede comunal.",
+      "imagenes": [
+        "assets/noticias/noticia-1.jpg"
+      ],
+      "pagina": "noticia-1.html",
+      "requierePago": false
+    },
+    {
+      "id": 2,
+      "slug": "jornada-de-vacunacion-distrital",
+      "titulo": "Jornada de Vacunación Distrital",
+      "categoria": "comunicados",
+      "fecha": "2026-10-25",
+      "fechaTexto": "25 de octubre",
+      "resumen": "Este 25 de octubre tendremos una jornada gratuita de vacunación contra la rabia para perros y gatos en el Salón Comunal Los Álamos.",
+      "detalle": "Te esperamos de 9:00 a. m. a 4:00 p. m. en la calle 66A # 97-64. ¡Trae a tu mascota y protege su salud!",
+      "imagenes": [
+        "assets/noticias/noticia-2.jpg"
+      ],
+      "pagina": "noticia-2.html",
+      "requierePago": false
+    },
+    {
+      "id": 3,
+      "slug": "simulacro-de-emergencias",
+      "titulo": "Simulacro de Emergencias en Los Álamos",
+      "categoria": "comunidad",
+      "fecha": "2026-10-21",
+      "fechaTexto": "21 de octubre",
+      "resumen": "Así se vivió el Simulacro de Emergencias 2026 en Los Álamos: una jornada de participación y aprendizaje para nuestra comunidad.",
+      "detalle": "Este 21 de octubre nos unimos para practicar cómo actuar ante una emergencia y fortalecer el cuidado de todos.",
+      "imagenes": [
+        "assets/noticias/noticia-3.jpg",
+        "assets/ConocerMas/noticia3.1.jpg",
+        "assets/ConocerMas/noticia3.2.jpg"
+      ],
+      "pagina": "noticia-3.html",
+      "requierePago": false
+    },
+    {
+      "id": 4,
+      "slug": "viejoteca-del-ano",
+      "titulo": "Viejoteca del año",
+      "categoria": "actividades",
+      "fecha": "2026-11-07",
+      "fechaTexto": "7 de noviembre",
+      "resumen": "Este 7 de noviembre, el Salón Comunal de Los Álamos se llenará de música, baile y recuerdos con una viejoteca para compartir entre vecinos y amigos.",
+      "detalle": "¡Reserva la fecha y prepárate para disfrutar! Pronto compartiremos más información.",
+      "imagenes": [
+        "assets/noticias/noticia-4.jpg"
+      ],
+      "pagina": "noticia-4.html",
+      "requierePago": true
+    },
+    {
+      "id": 5,
+      "slug": "jornada-gratuita-de-tamizaje",
+      "titulo": "Jornada gratuita de tamizaje",
+      "categoria": "comunicados",
+      "fecha": "2026-10-20",
+      "fechaTexto": "20 de octubre",
+      "resumen": "La Subred del Norte invita a una jornada gratuita de salud y tamizaje el 20 de octubre a las 2:00 p. m. en el Salón Comunal de Los Álamos.",
+      "detalle": "Habrá pruebas confidenciales de VIH, sífilis y hepatitis B para mayores de 16 años, además de chequeos básicos de salud. ¡Lleva tu documento de identidad!",
+      "imagenes": [
+        "assets/noticias/noticia-5.jpg"
+      ],
+      "pagina": "noticia-5.html",
+      "requierePago": false
+    },
+    {
+      "id": 6,
+      "slug": "taller-navideno",
+      "titulo": "Taller Navideño",
+      "categoria": "actividades",
+      "fecha": "2026-11-03",
+      "fechaTexto": "3 de noviembre",
+      "resumen": "Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a elaborar y decorar velas navideñas artesanales.",
+      "detalle": "¡Las inscripciones ya están abiertas! Participa y crea tus propios diseños. Más información al 3107833829.",
+      "imagenes": [
+        "assets/noticias/noticia-6.jpg"
+      ],
+      "pagina": "noticia-6.html",
+      "requierePago": true
+    }
+  ],
+  "pagos": [
+    {
+      "id": "viejoteca-2026",
+      "concepto": "Viejoteca del año",
+      "fecha": "2026-11-07",
+      "pagina": "noticia-4.html",
+      "valor": null,
+      "unidad": "por persona",
+      "moneda": "COP",
+      "enlacePago": null,
+      "estado": "valor-por-confirmar"
+    },
+    {
+      "id": "taller-navideno-2026",
+      "concepto": "Taller Navideño",
+      "fecha": "2026-11-03",
+      "pagina": "noticia-6.html",
+      "valor": null,
+      "unidad": "por persona",
+      "moneda": "COP",
+      "enlacePago": null,
+      "estado": "valor-por-confirmar"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Carpetas internas
+Disallow: /datos/
+
+Sitemap: https://icastro117.github.io/Junta_Comunal_Alamos/sitemap.xml

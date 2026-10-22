@@ -861,6 +861,7 @@ svg { width: 100%; height: 100%; }
   font-size: .82rem;
   font-weight: 300;
 }
+.pie__legal-inner > span:first-child { margin-right: auto; }
 .pie__legal-inner a { transition: color .2s ease; }
 .pie__legal-inner a:hover { color: var(--blanco); }
 
@@ -1092,8 +1093,231 @@ svg { width: 100%; height: 100%; }
   }
   .miniatura { width: 76px; height: 76px; }
 }
+
 /* ============================================================
-   15. ADAPTACION A CELULAR, TABLET Y PANTALLAS PEQUENAS
+   15. PAGO DEL EVENTO (caja dentro de cada noticia)
+   ============================================================ */
+.pago-evento {
+  margin: 30px 32px 0;
+  padding: 26px 28px 24px;
+  border: 1px solid var(--verde-200);
+  border-radius: var(--radio-lg);
+  background: linear-gradient(180deg, var(--verde-50) 0%, var(--blanco) 100%);
+  box-shadow: var(--sombra-sm);
+}
+
+.pago-evento__etiqueta {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 14px;
+  border-radius: var(--radio-full);
+  background: var(--verde-100);
+  color: var(--verde-700);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.pago-evento__titulo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--verde-900);
+}
+
+.pago-evento__fecha {
+  margin: 4px 0 0;
+  font-size: .9rem;
+  font-weight: 300;
+  color: var(--texto-suave);
+}
+
+.pago-evento__valor {
+  margin: 18px 0 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--verde-200);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: 1.15;
+  color: var(--verde-800);
+}
+.pago-evento__valor small {
+  display: block;
+  margin-top: 2px;
+  font-size: .82rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: var(--texto-suave);
+}
+
+/* ---------- Boton de PSE con el logo oficial ---------- */
+.btn--pse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  padding: 10px 24px 10px 10px;
+  border-radius: var(--radio-full);
+  background: #0A3D91;
+  color: var(--blanco);
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(10, 61, 145, .28);
+}
+.btn--pse:hover { background: #082F72; }
+.btn--pse:focus-visible { outline: 3px solid #FFC20E; outline-offset: 2px; }
+
+.btn__pse-marco {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--blanco);
+}
+.btn__pse-marco img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+}
+
+.pago-evento__nota {
+  margin: 16px 0 0;
+  font-size: .82rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--texto-suave);
+}
+.pago-evento__nota a {
+  color: var(--verde-600);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pago-evento__nota a:hover { color: var(--verde-700); }
+
+@media (max-width: 760px) {
+  .pago-evento { margin-inline: 20px; padding: 22px 20px 20px; }
+  .pago-evento__valor { font-size: 1.55rem; }
+  .btn--pse { font-size: .94rem; gap: 10px; }
+}
+
+/* ---------- Paginas legales (privacidad y terminos) ---------- */
+.contenedor--angosto { max-width: 860px; }
+
+.legal {
+  padding: 38px 40px 42px;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-lg);
+  box-shadow: var(--sombra-sm);
+}
+
+.legal__vigencia {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 6px 14px;
+  border-radius: var(--radio-full);
+  background: var(--verde-100);
+  color: var(--verde-700);
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.legal__entrada {
+  margin-bottom: 8px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--borde);
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--texto);
+}
+
+.legal h2 {
+  margin-block: 30px 12px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--verde-900);
+}
+
+.legal p {
+  margin-bottom: 14px;
+  font-size: .97rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--texto-suave);
+}
+
+.legal ul {
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+.legal li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 22px;
+  font-size: .97rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--texto-suave);
+}
+.legal li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--verde-200);
+}
+.legal li strong { font-weight: 600; color: var(--verde-900); }
+
+.legal__datos li::before { background: var(--verde-500); }
+
+.legal a {
+  color: var(--verde-600);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal a:hover { color: var(--verde-700); }
+
+.pendiente {
+  padding: 2px 9px;
+  border-radius: 6px;
+  background: #FCE7CE;
+  color: #9A5B10;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.legal__aviso {
+  margin-top: 34px;
+  padding: 18px 22px;
+  border-left: 4px solid var(--verde-500);
+  border-radius: 10px;
+  background: var(--verde-50);
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--texto-suave);
+}
+.legal__aviso strong { font-weight: 600; color: var(--verde-900); }
+
+@media (max-width: 760px) {
+  .legal { padding: 26px 20px 30px; }
+  .legal h2 { font-size: 1.08rem; }
+}
+/* ============================================================
+   16. ADAPTACION A CELULAR, TABLET Y PANTALLAS PEQUENAS
    ============================================================ */
 
 /* Para que el header fijo no tape las secciones al usar el menu */
@@ -1282,3 +1506,40 @@ section[id],
   .cifra strong { font-size: 1.7rem; }
   .pie__datos li { font-size: .82rem; }
 }
+
+/* ---------- Aviso del formulario de contacto ---------- */
+.aviso-form {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: .88rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+.aviso-form--error {
+  background: #FDECEC;
+  border: 1px solid #F3C9C9;
+  color: #A83232;
+}
+.aviso-form--ok {
+  background: var(--verde-100);
+  border: 1px solid var(--verde-200);
+  color: var(--verde-700);
+}
+
+/* ---------- Variantes de la caja de pago ---------- */
+
+/* Evento gratuito: sin boton, acento verde */
+.pago-evento--gratis { border-color: var(--verde-500); }
+.pago-evento--gratis .pago-evento__valor { color: var(--verde-600); }
+.pago-evento--gratis .pago-evento__nota { margin-top: 0; }
+
+/* Valor todavia sin confirmar: texto en vez de cifra */
+.pago-evento__valor--pendiente {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--verde-700);
+}
+
+/* ---------- Filtro del canal de noticias ---------- */
+.noticia--oculta { display: none; }

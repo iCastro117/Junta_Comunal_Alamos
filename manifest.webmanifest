@@ -1,0 +1,28 @@
+{
+  "name": "Junta de Acción Comunal Los Álamos",
+  "short_name": "JAC Los Álamos",
+  "description": "Participación, solidaridad y bienestar para el barrio Los Álamos.",
+  "lang": "es-CO",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F7FAF7",
+  "theme_color": "#11482A",
+  "categories": ["government", "social", "news"],
+  "icons": [
+    {
+      "src": "assets/logo/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
