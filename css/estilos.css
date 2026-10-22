@@ -457,6 +457,14 @@ svg { width: 100%; height: 100%; }
 }
 .noticia:hover { transform: translateY(-5px); box-shadow: var(--sombra); }
 
+/* Toda la tarjeta es un enlace: imagen, fecha, titulo y descripcion */
+.noticia:hover .noticia__titulo { color: var(--verde-600); }
+.noticia:hover .enlace-mas { gap: 13px; }
+.noticia:focus-visible {
+  outline: 2px solid var(--verde-500);
+  outline-offset: 3px;
+}
+
 /* Imágenes: assets/noticias/noticia-1.jpg … noticia-6.jpg */
 .noticia__img {
   height: 168px;
