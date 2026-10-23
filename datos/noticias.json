@@ -1,7 +1,7 @@
 {
   "$comentario": "Fuente de datos de las noticias y los cobros. El cobro de cada evento vive dentro de su propia pagina de noticia, no en el index. Hoy el sitio es HTML estatico y no lee este archivo en caliente; sirve como fuente unica de verdad.",
   "version": "1.0",
-  "actualizado": "2026-10-22",
+  "actualizado": "2026-10-23",
   "organizacion": {
     "nombre": "Junta de Acción Comunal Barrio Los Álamos",
     "sigla": "JAC Los Álamos",
@@ -104,14 +104,40 @@
       ],
       "pagina": "noticia-6.html",
       "requierePago": true
+    },
+    {
+      "id": 7,
+      "slug": "cine-en-los-alamos",
+      "titulo": "¡Hoy hay cine en Los Álamos!",
+      "categoria": "actividades",
+      "fecha": "2026-10-23",
+      "fechaTexto": "23 de octubre",
+      "resumen": "Disfruta una tarde de cine retro desde las 3:00 p. m. en el Salón Comunal.",
+      "detalle": "Por $5.000 incluye palomitas, snacks y bebida. ¡Ven con tu familia y amigos!",
+      "imagenes": [
+        "assets/noticias/noticia-7.jpg"
+      ],
+      "pagina": "noticia-7.html",
+      "requierePago": true
     }
   ],
   "pagos": [
     {
-      "id": "viejoteca-2026",
-      "concepto": "Viejoteca del año",
-      "fecha": "2026-11-07",
-      "pagina": "noticia-4.html",
+      "id": "cine-retro-2026",
+      "concepto": "Cine en Los Álamos",
+      "fecha": "2026-10-23",
+      "pagina": "noticia-7.html",
+      "valor": 5000,
+      "unidad": "por persona",
+      "moneda": "COP",
+      "enlacePago": null,
+      "estado": "cobro-presencial"
+    },
+    {
+      "id": "taller-navideno-2026",
+      "concepto": "Taller Navideño",
+      "fecha": "2026-11-03",
+      "pagina": "noticia-6.html",
       "valor": null,
       "unidad": "por persona",
       "moneda": "COP",
@@ -119,10 +145,10 @@
       "estado": "valor-por-confirmar"
     },
     {
-      "id": "taller-navideno-2026",
-      "concepto": "Taller Navideño",
-      "fecha": "2026-11-03",
-      "pagina": "noticia-6.html",
+      "id": "viejoteca-2026",
+      "concepto": "Viejoteca del año",
+      "fecha": "2026-11-07",
+      "pagina": "noticia-4.html",
       "valor": null,
       "unidad": "por persona",
       "moneda": "COP",

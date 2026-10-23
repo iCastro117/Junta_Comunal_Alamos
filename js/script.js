@@ -70,6 +70,132 @@ if (botonMenu && menu) {
 }
 
 /* ============================================================
+   APARICION AL BAJAR CON EL SCROLL
+   Las clases se ponen desde aqui: si alguien tiene el JavaScript
+   apagado, el contenido se ve normal y no desaparece nada.
+   ============================================================ */
+const QUIERE_MENOS_MOVIMIENTO =
+  window.matchMedia &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if ("IntersectionObserver" in window && !QUIERE_MENOS_MOVIMIENTO) {
+
+  /* Lo que aparece al entrar en pantalla, agrupado para escalonarlo */
+  const grupos = [
+    ".canal__encabezado",
+    ".cerca__encabezado",
+    ".acceso",
+    ".bienestar__izq",
+    ".valor",
+    ".noticia",
+    ".tarjeta-red",
+    ".visitanos",
+    ".formulario",
+    ".pago-evento",
+    ".articulo__principal",
+    ".lateral__caja",
+    ".legal"
+  ];
+
+  const observador = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (entrada) {
+      if (!entrada.isIntersecting) return;
+      entrada.target.classList.add("revelar--visible");
+      observador.unobserve(entrada.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -60px 0px"
+  });
+
+  grupos.forEach(function (selector) {
+    const elementos = Array.from(document.querySelectorAll(selector));
+    elementos.forEach(function (elemento, i) {
+      elemento.classList.add("revelar");
+      /* Cada hermano entra un poquito despues que el anterior */
+      elemento.style.transitionDelay = Math.min(i, 5) * 80 + "ms";
+      observador.observe(elemento);
+    });
+  });
+
+  /* Algunos bloques entran desde un lado, para que no sea todo igual */
+  const direcciones = [
+    [".bienestar__izq", "revelar--izq"],
+    [".valores", "revelar--der"],
+    [".visitanos", "revelar--izq"],
+    [".formulario", "revelar--der"],
+    [".galeria", "revelar--zoom"],
+    [".pago-evento", "revelar--zoom"],
+    [".accesos", "revelar--zoom"]
+  ];
+
+  direcciones.forEach(function (par) {
+    const elemento = document.querySelector(par[0]);
+    if (!elemento) return;
+    elemento.classList.add("revelar", par[1]);
+    observador.observe(elemento);
+  });
+}
+
+/* ============================================================
+   BARRA DE PROGRESO, HEADER COMPACTO Y BOTON DE SUBIR
+   ============================================================ */
+if (!QUIERE_MENOS_MOVIMIENTO) {
+  const barra = document.createElement("div");
+  barra.className = "progreso";
+  barra.setAttribute("aria-hidden", "true");
+  const relleno = document.createElement("span");
+  relleno.className = "progreso__relleno";
+  barra.appendChild(relleno);
+  document.body.appendChild(barra);
+}
+
+const cabecera = document.querySelector(".header");
+const rellenoBarra = document.querySelector(".progreso__relleno");
+
+/* Boton para volver arriba */
+const subir = document.createElement("button");
+subir.className = "subir";
+subir.type = "button";
+subir.setAttribute("aria-label", "Volver arriba");
+subir.innerHTML =
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>';
+document.body.appendChild(subir);
+
+subir.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: QUIERE_MENOS_MOVIMIENTO ? "auto" : "smooth"
+  });
+});
+
+/* Un solo calculo por cuadro, para no frenar el scroll */
+let pendiente = false;
+
+function alDesplazar() {
+  const y = window.scrollY || document.documentElement.scrollTop;
+
+  if (cabecera) cabecera.classList.toggle("header--compacto", y > 40);
+  subir.classList.toggle("subir--visible", y > 600);
+
+  if (rellenoBarra) {
+    const alto = document.documentElement.scrollHeight - window.innerHeight;
+    const avance = alto > 0 ? (y / alto) * 100 : 0;
+    rellenoBarra.style.width = avance + "%";
+  }
+
+  pendiente = false;
+}
+
+window.addEventListener("scroll", function () {
+  if (pendiente) return;
+  pendiente = true;
+  window.requestAnimationFrame(alDesplazar);
+}, { passive: true });
+
+alDesplazar();
+
+/* ============================================================
    FILTROS DEL CANAL DE NOTICIAS (solo en la pagina principal)
    Cada tarjeta lleva data-categoria y cada boton data-filtro.
    ============================================================ */
@@ -79,6 +205,19 @@ const gridNoticias = document.getElementById("gridNoticias");
 if (filtros && gridNoticias) {
   const botones = Array.from(filtros.querySelectorAll(".filtro"));
   const tarjetas = Array.from(gridNoticias.querySelectorAll(".noticia"));
+
+  const verTodas = document.getElementById("verTodas");
+  const verTodasTexto = document.getElementById("verTodasTexto");
+
+  /* Despliega o recoge el listado completo */
+  function desplegar(abierto) {
+    gridNoticias.classList.toggle("grid-noticias--todas", abierto);
+    if (!verTodas) return;
+    verTodas.setAttribute("aria-expanded", abierto ? "true" : "false");
+    verTodasTexto.textContent = abierto
+      ? "Ver menos noticias"
+      : "Ver todas las noticias";
+  }
 
   filtros.addEventListener("click", function (evento) {
     const boton = evento.target.closest(".filtro");
@@ -98,7 +237,17 @@ if (filtros && gridNoticias) {
       const coincide = elegida === "todas" || tarjeta.dataset.categoria === elegida;
       tarjeta.classList.toggle("noticia--oculta", !coincide);
     });
+
+    /* Al filtrar se abre el listado completo, para no esconder resultados */
+    desplegar(elegida !== "todas");
   });
+
+  if (verTodas) {
+    verTodas.addEventListener("click", function () {
+      const abierto = gridNoticias.classList.contains("grid-noticias--todas");
+      desplegar(!abierto);
+    });
+  }
 }
 
 /* ============================================================

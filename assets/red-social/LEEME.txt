@@ -1,10 +1,17 @@
 CARPETA: RED SOCIAL
 
-1) ICONOS del pie / tarjetas (ya incluidos):
+1) ICONOS (ya incluidos)
    facebook.svg, instagram.svg, whatsapp.svg, youtube.svg
 
-2) FOTOS de la seccion "Conectate con Los Alamos":
-   facebook.jpg, instagram.jpg, whatsapp.jpg
-   Tamano recomendado: 700 x 450 px aprox.
+2) PORTADA DE FACEBOOK  <-- FALTA, hay que ponerla a mano
+   Nombre exacto: facebook.jpg
+   Donde conseguirla: entra a la pagina de Facebook de la Junta,
+   clic derecho sobre la foto de portada > Guardar imagen como...
+   y guardala en esta carpeta con ese nombre.
+   Tamano recomendado: 820 x 430 px
 
-Enlazadas en css/estilos.css (.tarjeta-red__img--fb, --ig, --wa).
+   Mientras no este, la tarjeta muestra una portada azul de respaldo
+   con el simbolo de Facebook. No se ve rota, pero no es la real.
+
+3) Opcionales, si algun dia se abren esos canales:
+   instagram.jpg y whatsapp.jpg
