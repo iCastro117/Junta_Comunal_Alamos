@@ -4,4 +4,4 @@ Allow: /
 # Carpetas internas
 Disallow: /datos/
 
-Sitemap: https://icastro117.github.io/Junta_Comunal_Alamos/sitemap.xml
+Sitemap: https://junta-comunal-alamos.vercel.app/sitemap.xml
