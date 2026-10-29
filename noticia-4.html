@@ -26,11 +26,11 @@
   <meta property="og:url" content="https://junta-comunal-alamos.vercel.app/noticia-4.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <title>Viejoteca del año | Junta de Acción Comunal Los Álamos</title>
-  <meta name="description" content="Este 7 de noviembre, el Salón Comunal de Los Álamos se llenará de música, baile y recuerdos con una viejoteca para compartir entre vecinos y amigos." />
+  <meta name="description" content="Viejoteca del año en Los Álamos: sábado 7 de noviembre, de 7:00 p. m. a 2:00 a. m. Valor $20.000 por pareja." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/estilos.css?v=20261023" />
+  <link rel="stylesheet" href="css/estilos.css?v=20261029" />
 
   <!-- Datos estructurados (JSON-LD) para buscadores -->
   <script type="application/ld+json">
@@ -108,36 +108,73 @@
     <div class="contenedor articulo__grid">
 
       <article class="articulo__principal">
-        <img class="articulo__imagen" src="assets/noticias/noticia-4.jpg" alt="Viejoteca del año" />
+        <!-- Galería: toca una miniatura para verla en grande.
+             Las fotos van en assets/noticias/ y assets/ConocerMas/ -->
+        <div class="galeria">
+
+          <div class="galeria__miniaturas" id="galeriaMiniaturas">
+            <button class="miniatura miniatura--activa" type="button"
+                    data-imagen="assets/noticias/noticia-4.jpg" aria-label="Ver foto 1 de 3">
+              <img src="assets/noticias/noticia-4.jpg" alt="" />
+            </button>
+            <button class="miniatura" type="button"
+                    data-imagen="assets/ConocerMas/noticia4.1.jpg" aria-label="Ver foto 2 de 3">
+              <img src="assets/ConocerMas/noticia4.1.jpg" alt="" />
+            </button>
+            <button class="miniatura" type="button"
+                    data-imagen="assets/ConocerMas/noticia4.2.jpg" aria-label="Ver foto 3 de 3">
+              <img src="assets/ConocerMas/noticia4.2.jpg" alt="" />
+            </button>
+          </div>
+
+          <figure class="galeria__principal">
+            <img class="galeria__imagen" id="galeriaImagen"
+                 src="assets/noticias/noticia-4.jpg"
+                 alt="Viejoteca del año en Los Álamos" />
+            <figcaption class="galeria__contador">
+              <span id="galeriaContador">1</span> / 3
+            </figcaption>
+          </figure>
+
+        </div>
 
         <p class="articulo__meta">Publicado: el 7 de noviembre, 2026 por Junta de Acción Comunal Los Álamos</p>
 
         <div class="articulo__texto">
-          <p>Este 7 de noviembre, el Salón Comunal de Los Álamos se llenará de música, baile y recuerdos con una viejoteca para compartir entre vecinos y amigos.</p>
-          <p>¡Reserva la fecha y prepárate para disfrutar! Pronto compartiremos más información.</p>
-          <!-- Escribe aquí el resto del contenido de la noticia:
-               mas parrafos <p>...</p> o subtitulos <h2>...</h2> -->
+          <p>El sábado 7 de noviembre, el Salón Comunal de Los Álamos se llenará de música, baile y recuerdos con una viejoteca para compartir entre vecinos y amigos. ¡La edad no es un límite para disfrutar!</p>
+          <p>La fiesta va desde las <strong>7:00 p. m. hasta las 2:00 a. m.</strong>, en la Calle 66A # 97-64. El valor es de <strong>$20.000 por pareja</strong>.</p>
+
+          <h2>Cómo conseguir tu boleta</h2>
+          <p>Las boletas se venden <strong>presencialmente en el Salón Comunal de Los Álamos, del 29 de octubre al 5 de noviembre</strong>. También puedes hacer tu reserva llamando al <strong>3017418479</strong>.</p>
+          <p>¡Baila, ríe y comparte con nosotros! Música, buena compañía y mucha diversión.</p>
         </div>
 
 
-        <!-- ============ PAGO DE ESTE EVENTO ============
-             El boton todavia NO cobra: cambia el href="#" por el
-             enlace de pago que genera la pasarela. Ver PAGOS.md
-             ============================================== -->
-        <aside class="pago-evento">
-          <span class="pago-evento__etiqueta">Evento</span>
-          <h2 class="pago-evento__titulo">Viejoteca del año</h2>
-          <p class="pago-evento__fecha">7 de noviembre</p>
+        <!-- ============ INFORMACIÓN DE ESTE EVENTO ============ -->
+        <aside class="pago-evento pago-evento--con-contacto">
+          <div class="pago-evento__datos">
+            <span class="pago-evento__etiqueta">Evento</span>
+            <h2 class="pago-evento__titulo">Viejoteca del año</h2>
+            <p class="pago-evento__fecha">Sábado 7 de noviembre · 7:00 p. m. a 2:00 a. m.</p>
 
-          <p class="pago-evento__valor pago-evento__valor--pendiente">Valor por confirmar <small>por persona</small></p>
+            <p class="pago-evento__valor">$ 20.000 <small>por pareja</small></p>
 
+            <p class="pago-evento__nota">
+              Boletas a la venta en el Salón Comunal, del 29 de octubre al 5 de noviembre.
+              Consulta las <a href="terminos-y-condiciones.html">condiciones</a> y la
+              <a href="politica-de-privacidad.html">política de tratamiento de datos</a>.
+            </p>
+          </div>
 
-          <p class="pago-evento__nota">
-            El valor se publicará aquí apenas la Junta lo confirme. Para más
-            información escríbenos o acércate a la sede comunal.
-            Consulta las <a href="terminos-y-condiciones.html">condiciones</a> y la
-            <a href="politica-de-privacidad.html">política de tratamiento de datos</a>.
-          </p>
+          <div class="pago-evento__contacto">
+            <span class="pago-evento__contacto-icono">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5z"/></svg>
+            </span>
+            <p class="pago-evento__contacto-texto">
+              Reservas al
+              <a href="tel:+573017418479">3017418479</a>
+            </p>
+          </div>
         </aside>
 
         <a class="btn btn--claro btn--volver" href="index.html#noticias">
@@ -244,6 +281,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20261023"></script>
+  <script src="js/script.js?v=20261029"></script>
 </body>
 </html>

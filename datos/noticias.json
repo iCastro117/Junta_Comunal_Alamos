@@ -1,7 +1,7 @@
 {
   "$comentario": "Fuente de datos de las noticias y los cobros. El cobro de cada evento vive dentro de su propia pagina de noticia, no en el index. Hoy el sitio es HTML estatico y no lee este archivo en caliente; sirve como fuente unica de verdad.",
   "version": "1.0",
-  "actualizado": "2026-10-23",
+  "actualizado": "2026-10-29",
   "organizacion": {
     "nombre": "Junta de Acción Comunal Barrio Los Álamos",
     "sigla": "JAC Los Álamos",
@@ -67,10 +67,12 @@
       "categoria": "actividades",
       "fecha": "2026-11-07",
       "fechaTexto": "7 de noviembre",
-      "resumen": "Este 7 de noviembre, el Salón Comunal de Los Álamos se llenará de música, baile y recuerdos con una viejoteca para compartir entre vecinos y amigos.",
-      "detalle": "¡Reserva la fecha y prepárate para disfrutar! Pronto compartiremos más información.",
+      "resumen": "Sábado 7 de noviembre, de 7:00 p. m. a 2:00 a. m. en el Salón Comunal. Valor $20.000 por pareja.",
+      "detalle": "Boletas del 29 de octubre al 5 de noviembre en el Salón Comunal, o reservas al 3017418479.",
       "imagenes": [
-        "assets/noticias/noticia-4.jpg"
+        "assets/noticias/noticia-4.jpg",
+        "assets/ConocerMas/noticia4.1.jpg",
+        "assets/ConocerMas/noticia4.2.jpg"
       ],
       "pagina": "noticia-4.html",
       "requierePago": true
@@ -149,11 +151,14 @@
       "concepto": "Viejoteca del año",
       "fecha": "2026-11-07",
       "pagina": "noticia-4.html",
-      "valor": null,
-      "unidad": "por persona",
+      "valor": 20000,
+      "unidad": "por pareja",
       "moneda": "COP",
       "enlacePago": null,
-      "estado": "valor-por-confirmar"
+      "estado": "venta-presencial",
+      "telefono": "3017418479",
+      "ventaDesde": "2026-10-29",
+      "ventaHasta": "2026-11-05"
     }
   ]
 }
