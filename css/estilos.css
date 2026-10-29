@@ -2032,3 +2032,10 @@ section[id],
 
 /* Cuando la caja no tiene linea de valor, la nota no necesita separador */
 .pago-evento__nota--sola { margin-top: 18px; }
+
+/* Columna derecha cuando la caja lleva varios recuadros */
+.pago-evento__lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}

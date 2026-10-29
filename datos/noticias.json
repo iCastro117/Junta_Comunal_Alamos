@@ -16,14 +16,15 @@
     {
       "id": 1,
       "slug": "dia-dulces-de-los-ninos",
-      "titulo": "Día Dulces de los Niños",
+      "titulo": "Día Dulce de los Niños",
       "categoria": "actividades",
       "fecha": "2026-10-30",
       "fechaTexto": "30 de octubre",
-      "resumen": "La Junta de Acción Comunal Los Álamos invita a las familias a compartir una tarde de disfraces, dulces y diversión.",
-      "detalle": "Los esperamos el 30 de octubre, de 5:00 p. m. a 8:00 p. m., en nuestra sede comunal.",
+      "resumen": "Las JAC Los Álamos y Los Ángeles celebran el Día de los Niños: viernes 30 de octubre, de 5:00 a 8:00 p. m.",
+      "detalle": "Para niños de 3 a 11 años, con concurso de disfraces y dulces. Inscripciones al 3017418479.",
       "imagenes": [
-        "assets/noticias/noticia-1.jpg"
+        "assets/noticias/noticia-1.jpg",
+        "assets/ConocerMas/noticia1.1.jpg"
       ],
       "pagina": "noticia-1.html",
       "requierePago": false

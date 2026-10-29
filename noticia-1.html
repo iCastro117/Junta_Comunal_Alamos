@@ -26,11 +26,11 @@
   <meta property="og:url" content="https://junta-comunal-alamos.vercel.app/noticia-1.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <title>Día Dulces de los Niños | Junta de Acción Comunal Los Álamos</title>
-  <meta name="description" content="La Junta de Acción Comunal Los Álamos invita a las familias a compartir una tarde de disfraces, dulces y diversión." />
+  <meta name="description" content="Día Dulce de los Niños en Los Álamos: viernes 30 de octubre, de 5:00 a 8:00 p. m. Para niños de 3 a 11 años, con concurso de disfraces. Inscripciones al 3017418479." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/estilos.css?v=20261029" />
+  <link rel="stylesheet" href="css/estilos.css?v=20261029b" />
 
   <!-- Datos estructurados (JSON-LD) para buscadores -->
   <script type="application/ld+json">
@@ -108,42 +108,82 @@
     <div class="contenedor articulo__grid">
 
       <article class="articulo__principal">
-        <img class="articulo__imagen" src="assets/noticias/noticia-1.jpg" alt="Día Dulces de los Niños" />
+        <!-- Galería: el afiche va de primeras, la foto anterior de segunda -->
+        <div class="galeria">
+
+          <div class="galeria__miniaturas" id="galeriaMiniaturas">
+            <button class="miniatura miniatura--activa" type="button"
+                    data-imagen="assets/noticias/noticia-1.jpg" aria-label="Ver foto 1 de 2">
+              <img src="assets/noticias/noticia-1.jpg" alt="" />
+            </button>
+            <button class="miniatura" type="button"
+                    data-imagen="assets/ConocerMas/noticia1.1.jpg" aria-label="Ver foto 2 de 2">
+              <img src="assets/ConocerMas/noticia1.1.jpg" alt="" />
+            </button>
+          </div>
+
+          <figure class="galeria__principal">
+            <img class="galeria__imagen" id="galeriaImagen"
+                 src="assets/noticias/noticia-1.jpg"
+                 alt="Afiche del Día Dulce de los Niños en Los Álamos" />
+            <figcaption class="galeria__contador">
+              <span id="galeriaContador">1</span> / 2
+            </figcaption>
+          </figure>
+
+        </div>
 
         <p class="articulo__meta">Publicado: el 30 de octubre, 2026 por Junta de Acción Comunal Los Álamos</p>
 
         <div class="articulo__texto">
-          <p>La Junta de Acción Comunal Los Álamos invita a las familias a compartir una tarde de disfraces, dulces y diversión.</p>
-          <p>Los esperamos el 30 de octubre, de 5:00 p. m. a 8:00 p. m., en nuestra sede comunal.</p>
-          <!-- Escribe aquí el resto del contenido de la noticia:
-               mas parrafos <p>...</p> o subtitulos <h2>...</h2> -->
+          <p>Las Juntas de Acción Comunal de <strong>Los Álamos</strong> y <strong>Los Ángeles</strong> se unen para celebrar el Día de los Niños en el territorio, con una tarde de disfraces, dulces y diversión para las familias del barrio.</p>
+          <p>Es el <strong>viernes 30 de octubre, de 5:00 p. m. a 8:00 p. m.</strong>, en la Sede Comunal JAC Los Álamos, Calle 66A # 97-64, Engativá.</p>
+
+          <h2>Quiénes pueden participar</h2>
+          <p>Niñas y niños <strong>desde los 3 hasta los 11 años</strong>. Habrá <strong>concurso de disfraces</strong> y dulces para todos.</p>
+
+          <h2>Cómo inscribirse</h2>
+          <p>Las inscripciones ya están abiertas. Comunícate al <strong>3017418479</strong> para inscribir a tu niña o niño.</p>
         </div>
 
 
         <!-- ============ ENTRADA A ESTE EVENTO ============
              Evento gratuito: no lleva botón de pago.
              ============================================== -->
+        <!-- ============ INFORMACIÓN DE ESTE EVENTO ============ -->
         <aside class="pago-evento pago-evento--gratis pago-evento--con-contacto">
           <div class="pago-evento__datos">
-          <span class="pago-evento__etiqueta">Evento</span>
-          <h2 class="pago-evento__titulo">Día Dulces de los Niños</h2>
-          <p class="pago-evento__fecha">30 de octubre</p>
+            <span class="pago-evento__etiqueta">Evento</span>
+            <h2 class="pago-evento__titulo">Día Dulce de los Niños</h2>
+            <p class="pago-evento__fecha">Viernes 30 de octubre · 5:00 p. m. a 8:00 p. m.</p>
 
-
-          <p class="pago-evento__nota">
-            No hay que pagar ni inscribirse. Acércate a la sede comunal el día del
-            evento, de 5:00 p. m. a 8:00 p. m.
-          </p>
+            <p class="pago-evento__nota">
+              Para niñas y niños de 3 a 11 años. La entrada no tiene costo, pero hay
+              que inscribirse antes. Consulta la
+              <a href="politica-de-privacidad.html">política de tratamiento de datos</a>.
+            </p>
           </div>
 
-          <div class="pago-evento__contacto pago-evento__contacto--gratis">
-            <span class="pago-evento__contacto-icono">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-            </span>
-            <p class="pago-evento__contacto-texto">
-              Entrada
-              <strong>Gratuito</strong>
-            </p>
+          <div class="pago-evento__lateral">
+            <div class="pago-evento__contacto pago-evento__contacto--gratis">
+              <span class="pago-evento__contacto-icono">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+              </span>
+              <p class="pago-evento__contacto-texto">
+                Entrada
+                <strong>Gratuito</strong>
+              </p>
+            </div>
+
+            <div class="pago-evento__contacto">
+              <span class="pago-evento__contacto-icono">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5z"/></svg>
+              </span>
+              <p class="pago-evento__contacto-texto">
+                Inscripciones al
+                <a href="tel:+573017418479">3017418479</a>
+              </p>
+            </div>
           </div>
         </aside>
 
@@ -251,6 +291,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20261029"></script>
+  <script src="js/script.js?v=20261029b"></script>
 </body>
 </html>
