@@ -9,27 +9,35 @@
    - imagen: la foto dentro de assets/banner/
    - titulo: cada línea del título grande (una por renglón)
    - texto:  cada línea del párrafo de abajo
+   - enlace: a donde lleva el botón "Ver noticias" en ese banner.
+             Si es la página de una noticia, se pone "noticia-4.html".
+             Si todavía no hay noticia, se deja "#noticias" y lleva
+             al listado completo.
    ------------------------------------------------------------ */
 const banners = [
   {
     imagen: "assets/banner/banner-1.jpg",
     titulo: ["Juntos", "construimos", "un mejor barrio"],
-    texto: ["Participación, solidaridad y bienestar", "para nuestra comunidad."]
+    texto: ["Participación, solidaridad y bienestar", "para nuestra comunidad."],
+    enlace: "#noticias"
   },
   {
     imagen: "assets/banner/banner-2.jpg",
     titulo: ["Día Dulce", "de los Niños"],
-    texto: ["Gran evento de celebración", "30 de octubre, 5pm a 8pm"]
+    texto: ["Gran evento de celebración", "30 de octubre, 5pm a 8pm"],
+    enlace: "noticia-1.html"
   },
   {
     imagen: "assets/banner/banner-3.jpg",
-    titulo: ["Así se vivió el ", "Simulacro de Emergenciasl", "en Los Álamos"],
-    texto: ["Escribe aquí el texto de apoyo", "del tercer banner."]
+    titulo: ["Así se vivió el ", "Simulacro de Emergencias", "en Los Álamos"],
+    texto: ["Una jornada de participación y aprendizaje", "para toda la comunidad."],
+    enlace: "noticia-3.html"
   },
   {
     imagen: "assets/banner/banner-4.jpg",
     titulo: ["Viejoteca", "Este 7 de noviembre!"],
-    texto: ["Disfruta de música, baile y buenos recuerdos con vecinos", "y amigos en el Salón Comunal."]
+    texto: ["Disfruta de música, baile y buenos recuerdos con vecinos", "y amigos en el Salón Comunal."],
+    enlace: "noticia-4.html"
   }
 ];
 
@@ -368,6 +376,7 @@ const fondo = document.getElementById("heroFondo");
 const textos = document.getElementById("heroTextos");
 const titulo = document.getElementById("heroTitulo");
 const texto = document.getElementById("heroTexto");
+const heroEnlace = document.getElementById("heroEnlace");
 const puntos = Array.from(document.querySelectorAll("#heroPuntos .punto"));
 const anterior = document.getElementById("heroAnterior");
 const siguiente = document.getElementById("heroSiguiente");
@@ -395,6 +404,11 @@ function mostrarBanner(indice) {
     fondo.style.backgroundImage = 'url("' + banner.imagen + '")';
     escribirLineas(titulo, banner.titulo);
     escribirLineas(texto, banner.texto);
+
+    /* El boton "Ver noticias" lleva a la noticia de este banner */
+    if (heroEnlace) {
+      heroEnlace.href = banner.enlace || "#noticias";
+    }
 
     fondo.classList.remove("esta-cambiando");
     textos.classList.remove("esta-cambiando");
