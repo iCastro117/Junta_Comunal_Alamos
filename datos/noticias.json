@@ -1,7 +1,7 @@
 {
   "$comentario": "Fuente de datos de las noticias y los cobros. El cobro de cada evento vive dentro de su propia pagina de noticia, no en el index. Hoy el sitio es HTML estatico y no lee este archivo en caliente; sirve como fuente unica de verdad.",
   "version": "1.0",
-  "actualizado": "2026-10-29",
+  "actualizado": "2026-11-02",
   "organizacion": {
     "nombre": "Junta de Acción Comunal Barrio Los Álamos",
     "sigla": "JAC Los Álamos",
@@ -122,6 +122,25 @@
       ],
       "pagina": "noticia-7.html",
       "requierePago": true
+    },
+    {
+      "id": 8,
+      "slug": "asi-celebramos-el-dia-de-los-ninos",
+      "titulo": "Así celebramos el Día de los Niños",
+      "categoria": "comunidad",
+      "fecha": "2026-10-30",
+      "fechaTexto": "30 de octubre",
+      "resumen": "La celebración del Día Dulce de los Niños fue todo un éxito: el Salón Comunal se llenó de disfraces, dulces y risas.",
+      "detalle": "Gracias a los papitos, a Los Inigualables, a Opain y a todos los que nos acompañaron. ¡Nos vemos el próximo año!",
+      "imagenes": [
+        "assets/noticias/noticia-8.jpg",
+        "assets/ConocerMas/noticia8.1.jpg",
+        "assets/ConocerMas/noticia8.2.jpg",
+        "assets/ConocerMas/noticia8.3.jpg",
+        "assets/ConocerMas/noticia8.4.jpg"
+      ],
+      "pagina": "noticia-8.html",
+      "requierePago": false
     }
   ],
   "pagos": [

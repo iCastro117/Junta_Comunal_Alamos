@@ -2039,3 +2039,32 @@ section[id],
   flex-direction: column;
   gap: 14px;
 }
+
+/* ---------- Listas dentro del texto de una noticia ---------- */
+.articulo__texto ul {
+  margin: 0 0 18px;
+  padding-left: 2px;
+}
+.articulo__texto li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 24px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--texto-lectura);
+}
+.articulo__texto li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--verde-500);
+}
+.articulo__texto li strong { font-weight: 600; color: var(--verde-900); }
+
+/* Foto de la noticia 8 en la tarjeta del inicio */
+.noticia__img--8 { background-image: url("../assets/noticias/noticia-8.jpg"); }
