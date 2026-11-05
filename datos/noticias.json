@@ -1,5 +1,5 @@
 {
-  "$comentario": "Fuente de datos de las noticias y los cobros. El cobro de cada evento vive dentro de su propia pagina de noticia, no en el index. Hoy el sitio es HTML estatico y no lee este archivo en caliente; sirve como fuente unica de verdad.",
+  "$comentario": "Fuente de datos de las noticias y los cobros. Los pagos no se hacen en linea: se coordinan por WhatsApp o de forma presencial, segun lo que indique cada evento. El sitio es HTML estatico y no lee este archivo en caliente; sirve como fuente unica de verdad.",
   "version": "1.0",
   "actualizado": "2026-11-05",
   "organizacion": {
@@ -186,7 +186,6 @@
       "valor": 5000,
       "unidad": "por persona",
       "moneda": "COP",
-      "enlacePago": null,
       "estado": "cobro-presencial"
     },
     {
@@ -197,7 +196,6 @@
       "valor": 25000,
       "unidad": "por persona",
       "moneda": "COP",
-      "enlacePago": null,
       "estado": "inscripcion-por-whatsapp",
       "telefono": "3107833829",
       "incluye": "materiales"
@@ -210,7 +208,6 @@
       "valor": 20000,
       "unidad": "por pareja",
       "moneda": "COP",
-      "enlacePago": null,
       "estado": "venta-presencial",
       "telefono": "3017418479",
       "ventaDesde": "2026-10-29",
@@ -225,7 +222,6 @@
       "unidad": "por persona",
       "moneda": "COP",
       "incluye": "materiales",
-      "enlacePago": null,
       "estado": "inscripcion-por-whatsapp",
       "telefono": "3107833829"
     },
@@ -238,7 +234,6 @@
       "unidad": "por persona",
       "moneda": "COP",
       "incluye": "materiales",
-      "enlacePago": null,
       "estado": "inscripcion-por-whatsapp",
       "telefono": "3107833829"
     }

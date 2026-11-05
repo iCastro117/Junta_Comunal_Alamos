@@ -1164,39 +1164,6 @@ svg { width: 100%; height: 100%; }
   color: var(--texto-suave);
 }
 
-/* ---------- Boton de PSE con el logo oficial ---------- */
-.btn--pse {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  width: 100%;
-  padding: 10px 24px 10px 10px;
-  border-radius: var(--radio-full);
-  background: #0A3D91;
-  color: var(--blanco);
-  font-size: 1rem;
-  font-weight: 600;
-  box-shadow: 0 10px 24px rgba(10, 61, 145, .28);
-}
-.btn--pse:hover { background: #082F72; }
-.btn--pse:focus-visible { outline: 3px solid #FFC20E; outline-offset: 2px; }
-
-.btn__pse-marco {
-  display: grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background: var(--blanco);
-}
-.btn__pse-marco img {
-  width: 40px;
-  height: 40px;
-  display: block;
-  border-radius: 50%;
-}
 
 .pago-evento__nota {
   margin: 16px 0 0;
@@ -1216,7 +1183,6 @@ svg { width: 100%; height: 100%; }
 @media (max-width: 760px) {
   .pago-evento { margin-inline: 20px; padding: 22px 20px 20px; }
   .pago-evento__valor { font-size: 1.55rem; }
-  .btn--pse { font-size: .94rem; gap: 10px; }
 }
 
 /* ---------- Paginas legales (privacidad y terminos) ---------- */

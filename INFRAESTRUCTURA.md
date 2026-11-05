@@ -1,64 +1,14 @@
 # Infraestructura tecnológica y seguridad
 
-Documento para quien responda el formulario de vinculación de PSE (ACH Colombia)
-y para quien mantenga el sitio.
+Documento para quien mantenga el sitio.
+
+> **Los pagos no se hacen en línea.** Cada actividad se cobra por WhatsApp o de
+> forma presencial, según lo que indique su publicación. El sitio no procesa
+> pagos ni guarda datos bancarios.
 
 ---
 
-## 1. La respuesta al formulario de ACH
-
-El formulario de vinculación directa a PSE pregunta:
-
-> **¿Tu empresa cuenta con la infraestructura tecnológica y el equipo técnico para
-> desarrollar e implementar la integración con PSE?**
-
-Con el sitio **tal como está hoy**, la respuesta honesta es **NO**, y responder
-que sí haría que la vinculación se caiga en la etapa técnica.
-
-### Por qué
-
-La integración directa con PSE exige, como mínimo:
-
-| Requisito de ACH | ¿Lo tiene el sitio hoy? |
-|---|---|
-| Servidor propio con lógica de backend | **No.** Es un sitio estático (solo HTML, CSS y JS en el navegador) |
-| Endpoint público para recibir la confirmación del pago (webhook) | **No.** Un sitio estático no puede recibir peticiones POST |
-| Almacenamiento seguro de llaves y secretos | **No.** Todo lo que está aquí es público: el repositorio es abierto |
-| Base de datos de transacciones y conciliación | **No** |
-| Registro de auditoría (logs) de cada transacción | **No** |
-| Certificado SSL sobre dominio propio | **Parcial.** HTTPS sí, pero sobre el dominio de GitHub |
-| Equipo técnico de soporte, pruebas y mantenimiento | **No**, salvo que se contrate |
-| Ambiente de pruebas separado del de producción | **No** |
-
-### Qué responder entonces
-
-Marcar **"No"** en esa pregunta no descalifica a la Junta: simplemente dirige la
-conversación hacia el camino correcto, que es **vincularse a través de una pasarela
-de pagos** ya certificada por ACH (Wompi, ePayco, Bold, PayU, PlacetoPay,
-Mercado Pago). La pasarela ya tiene toda esa infraestructura y la Junta se vincula
-como comercio, no como integrador.
-
-Los pasos de esa ruta están en **PAGOS.md**.
-
-### Si algún día se quiere la integración directa
-
-Habría que montar, como mínimo:
-
-1. Un backend (Node.js, Python o PHP) en un servidor propio o en la nube.
-2. Un dominio propio con certificado SSL.
-3. Base de datos para órdenes y transacciones.
-4. Endpoint de confirmación (webhook) con validación de firma.
-5. Gestor de secretos (variables de entorno, nunca en el repositorio).
-6. Logs de auditoría con retención definida.
-7. Ambientes separados de pruebas y producción.
-8. Una persona o empresa responsable del soporte.
-
-Para el volumen de una Junta de Acción Comunal, **esto no se justifica**: el costo
-de mantenerlo supera lo que se recauda.
-
----
-
-## 2. Qué tiene el sitio hoy
+## 1. Qué tiene el sitio hoy
 
 ### Arquitectura
 
@@ -124,27 +74,25 @@ significa cero vulnerabilidades heredadas y nada que actualizar por seguridad.
 
 ---
 
-## 3. Pendientes
+## 2. Pendientes
 
 Ordenados por impacto:
 
 1. **Completar el NIT** de la Junta en `politica-de-privacidad.html`.
 2. **Aprobar en acta** la política de datos y los términos, por la junta directiva.
 3. **Revisar en Vercel** que las cabeceras de `vercel.json` estén activas (pestaña Network del navegador o securityheaders.com).
-4. **Dominio propio** (ej. `jaclosalamos.org`): da confianza y es casi un requisito
-   para que una pasarela apruebe la vinculación.
-5. **Generar los enlaces de pago** y pegarlos en la página de cada evento (ver PAGOS.md).
-6. **Correo institucional** en vez de Gmail, si se consigue el dominio.
-7. **Formulario con envío automático**: si se quiere que llegue solo al correo sin
+4. **Dominio propio** (ej. `jaclosalamos.org`): da confianza y hace el sitio más fácil de recordar.
+5. **Correo institucional** en vez de Gmail, si se consigue el dominio.
+6. **Formulario con envío automático**: si se quiere que llegue solo al correo sin
    abrir el gestor del usuario, se puede usar un servicio de formularios (Formspree,
    Web3Forms) con el plan gratuito. Requiere registrar el sitio y pegar una clave
    pública en el HTML.
-8. **Copia de seguridad**: el repositorio de GitHub ya cumple esa función, siempre
+7. **Copia de seguridad**: el repositorio de GitHub ya cumple esa función, siempre
    que los cambios se suban.
 
 ---
 
-## 4. Cómo publicar cambios
+## 3. Cómo publicar cambios
 
 ```bash
 git add -A
