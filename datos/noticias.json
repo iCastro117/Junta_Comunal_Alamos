@@ -154,7 +154,7 @@
       "fecha": "2026-11-10",
       "fechaTexto": "10 de noviembre",
       "resumen": "Aprende y crea tu propio cuadro navideño brillante: 10 de noviembre a las 2:00 p. m. en la JAC Los Álamos.",
-      "detalle": "Inversión $25.000 con materiales incluidos.",
+      "detalle": "Inversión $25.000 con materiales incluidos. Inscripciones por WhatsApp al 310 783 3829.",
       "imagenes": [
         "assets/noticias/noticia-9.jpg"
       ],
@@ -211,7 +211,8 @@
       "moneda": "COP",
       "incluye": "materiales",
       "enlacePago": null,
-      "estado": "inscripcion-presencial"
+      "estado": "inscripcion-por-whatsapp",
+      "telefono": "3107833829"
     }
   ]
 }
