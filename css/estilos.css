@@ -1438,8 +1438,22 @@ section[id],
     font-size: .9rem;
   }
 
-  .hero__flecha { display: none; }
-  .hero__puntos { bottom: 30px; }
+  /* En celular se navega con flechas, no con puntitos */
+  .hero__puntos { display: none; }
+
+  .hero__flecha {
+    display: block;
+    top: auto;
+    bottom: 24px;
+    transform: none;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    background: rgba(255, 255, 255, .16);
+    backdrop-filter: blur(4px);
+  }
+  .hero__flecha--izq { left: 50%; right: auto; margin-left: -50px; }
+  .hero__flecha--der { right: 50%; left: auto; margin-right: -50px; }
 
   /* --- Accesos rapidos: ya no se montan sobre el banner --- */
   .accesos-wrap { margin-top: 22px; }
@@ -1502,7 +1516,6 @@ section[id],
   .hero__titulo { font-size: 1.95rem; }
   .hero__contenido { padding-block: 44px 72px; }
   .hero__texto { font-size: .94rem; }
-  .hero__puntos { bottom: 28px; }
   .hero__botones .btn { padding: 12px 18px; font-size: .86rem; }
 
   .titulo-seccion { font-size: 1.6rem; }
@@ -2068,3 +2081,26 @@ section[id],
 
 /* Foto de la noticia 8 en la tarjeta del inicio */
 .noticia__img--8 { background-image: url("../assets/noticias/noticia-8.jpg"); }
+
+/* ============================================================
+   20. SIN DESPLAZAMIENTO LATERAL
+   ============================================================ */
+
+/* Las apariciones laterales desplazan el elemento 34px hacia el lado
+   antes de entrar, y eso ensancha la pagina. Se recorta ese sobrante.
+   Se usa "clip" y no "hidden" a proposito: "hidden" crearia un area de
+   desplazamiento propia y rompe el header que va pegado arriba. */
+body { overflow-x: clip; }
+
+@media (max-width: 760px) {
+  /* En pantallas angostas las entradas laterales no se aprecian y
+     sí estorban, asi que ahi todo entra subiendo */
+  .revelar--izq,
+  .revelar--der { transform: translateY(26px); }
+}
+
+@media (max-width: 460px) {
+  .hero__flecha { bottom: 18px; width: 40px; height: 40px; padding: 11px; }
+  .hero__flecha--izq { margin-left: -46px; }
+  .hero__flecha--der { margin-right: -46px; }
+}
