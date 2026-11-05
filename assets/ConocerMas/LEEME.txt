@@ -1,15 +1,13 @@
 CARPETA: CONOCERMAS
 
-Fotos extra de las galerias de las paginas de noticia
-(las que se abren al tocar "Conocer mas").
+Fotos extra de las galerias de las paginas de noticia.
 
-Ahora mismo:
-  noticia1.1.jpg -> segunda foto de noticia-1.html (Dia Dulce)
-  noticia3.1.jpg -> segunda foto de noticia-3.html (Simulacro)
-  noticia3.2.jpg -> tercera foto de noticia-3.html
-  noticia4.1.jpg -> segunda foto de noticia-4.html (Viejoteca, afiche dorado)
-  noticia4.2.jpg -> tercera foto de noticia-4.html (Viejoteca, afiche de colores)
-  noticia8.1 a 8.4 -> fotos 2 a 5 de noticia-8.html (celebracion del Dia de los Ninos)
+  noticia1.1.jpg      -> foto 2 de noticia-1.html (Dia Dulce)
+  noticia3.1 a 3.2    -> fotos 2 y 3 de noticia-3.html (Simulacro)
+  noticia4.1 a 4.2    -> fotos 2 y 3 de noticia-4.html (Viejoteca, afiches)
+  noticia6.1          -> afiche del Taller Navideno
+  noticia6.2 a 6.4    -> fotos 3 a 5 de noticia-6.html (velas y taller)
+  noticia8.1 a 8.4    -> fotos 2 a 5 de noticia-8.html (Dia de los Ninos)
 
 La foto principal de cada noticia, la que sale en la tarjeta del inicio,
 va en assets/noticias/ como noticia-N.jpg

@@ -1,7 +1,7 @@
 {
   "$comentario": "Fuente de datos de las noticias y los cobros. El cobro de cada evento vive dentro de su propia pagina de noticia, no en el index. Hoy el sitio es HTML estatico y no lee este archivo en caliente; sirve como fuente unica de verdad.",
   "version": "1.0",
-  "actualizado": "2026-11-02",
+  "actualizado": "2026-11-05",
   "organizacion": {
     "nombre": "Junta de Acción Comunal Barrio Los Álamos",
     "sigla": "JAC Los Álamos",
@@ -98,12 +98,16 @@
       "slug": "taller-navideno",
       "titulo": "Taller Navideño",
       "categoria": "actividades",
-      "fecha": "2026-11-03",
-      "fechaTexto": "3 de noviembre",
-      "resumen": "Este 3 de noviembre, la JAC Los Álamos realizará un taller para aprender a elaborar y decorar velas navideñas artesanales.",
-      "detalle": "¡Las inscripciones ya están abiertas! Participa y crea tus propios diseños. Más información al 3107833829.",
+      "fecha": "2026-12-05",
+      "fechaTexto": "5 de diciembre",
+      "resumen": "Crea tus propias velas navideñas: viernes 5 de diciembre, de 3:00 a 7:00 p. m. en el Salón Comunal.",
+      "detalle": "Inversión $25.000 con materiales incluidos. Cupos limitados, inscripciones por WhatsApp al 310 783 3829.",
       "imagenes": [
-        "assets/noticias/noticia-6.jpg"
+        "assets/noticias/noticia-6.jpg",
+        "assets/ConocerMas/noticia6.1.jpg",
+        "assets/ConocerMas/noticia6.2.jpg",
+        "assets/ConocerMas/noticia6.3.jpg",
+        "assets/ConocerMas/noticia6.4.jpg"
       ],
       "pagina": "noticia-6.html",
       "requierePago": true
@@ -158,13 +162,15 @@
     {
       "id": "taller-navideno-2026",
       "concepto": "Taller Navideño",
-      "fecha": "2026-11-03",
+      "fecha": "2026-12-05",
       "pagina": "noticia-6.html",
-      "valor": null,
+      "valor": 25000,
       "unidad": "por persona",
       "moneda": "COP",
       "enlacePago": null,
-      "estado": "valor-por-confirmar"
+      "estado": "inscripcion-por-whatsapp",
+      "telefono": "3107833829",
+      "incluye": "materiales"
     },
     {
       "id": "viejoteca-2026",
