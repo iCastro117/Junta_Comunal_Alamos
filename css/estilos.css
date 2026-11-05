@@ -2104,3 +2104,6 @@ body { overflow-x: clip; }
   .hero__flecha--izq { margin-left: -46px; }
   .hero__flecha--der { margin-right: -46px; }
 }
+
+/* Foto de la noticia 9 en la tarjeta del inicio */
+.noticia__img--9 { background-image: url("../assets/noticias/noticia-9.jpg"); }

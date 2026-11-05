@@ -145,6 +145,21 @@
       ],
       "pagina": "noticia-8.html",
       "requierePago": false
+    },
+    {
+      "id": 9,
+      "slug": "taller-de-tecnica-diamante",
+      "titulo": "Taller de Técnica Diamante",
+      "categoria": "actividades",
+      "fecha": "2026-11-10",
+      "fechaTexto": "10 de noviembre",
+      "resumen": "Aprende y crea tu propio cuadro navideño brillante: 10 de noviembre a las 2:00 p. m. en la JAC Los Álamos.",
+      "detalle": "Inversión $25.000 con materiales incluidos.",
+      "imagenes": [
+        "assets/noticias/noticia-9.jpg"
+      ],
+      "pagina": "noticia-9.html",
+      "requierePago": true
     }
   ],
   "pagos": [
@@ -185,6 +200,18 @@
       "telefono": "3017418479",
       "ventaDesde": "2026-10-29",
       "ventaHasta": "2026-11-05"
+    },
+    {
+      "id": "tecnica-diamante-2026",
+      "concepto": "Taller de Técnica Diamante",
+      "fecha": "2026-11-10",
+      "pagina": "noticia-9.html",
+      "valor": 25000,
+      "unidad": "por persona",
+      "moneda": "COP",
+      "incluye": "materiales",
+      "enlacePago": null,
+      "estado": "inscripcion-presencial"
     }
   ]
 }
