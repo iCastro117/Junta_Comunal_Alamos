@@ -23,9 +23,9 @@ const banners = [
   },
   {
     imagen: "assets/banner/banner-2.jpg",
-    titulo: ["Día Dulce", "de los Niños"],
-    texto: ["Gran evento de celebración", "30 de octubre, 5pm a 8pm"],
-    enlace: "noticia-1.html"
+    titulo: ["Así celebramos", "el Día de los Niños"],
+    texto: ["Disfraces, dulces y risas", "en el Salón Comunal."],
+    enlace: "noticia-8.html"
   },
   {
     imagen: "assets/banner/banner-3.jpg",
