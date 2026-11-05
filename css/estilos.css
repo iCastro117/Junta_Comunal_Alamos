@@ -2107,3 +2107,6 @@ body { overflow-x: clip; }
 
 /* Foto de la noticia 9 en la tarjeta del inicio */
 .noticia__img--9 { background-image: url("../assets/noticias/noticia-9.jpg"); }
+
+/* Foto de la noticia 10 en la tarjeta del inicio */
+.noticia__img--10 { background-image: url("../assets/noticias/noticia-10.jpg"); }

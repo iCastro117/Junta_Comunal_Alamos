@@ -160,6 +160,21 @@
       ],
       "pagina": "noticia-9.html",
       "requierePago": true
+    },
+    {
+      "id": 10,
+      "slug": "gorro-y-bufanda-navidenos",
+      "titulo": "Haz tu propio Gorro y Bufanda Navideños",
+      "categoria": "actividades",
+      "fecha": "2026-11-11",
+      "fechaTexto": "11 al 13 de noviembre",
+      "resumen": "Teje tu propio gorro y bufanda navideños con tu color preferido: 11, 12 y 13 de noviembre en el Salón Comunal.",
+      "detalle": "Inversión $25.000 con materiales incluidos. Cupos limitados, inscripciones por WhatsApp al 310 783 3829.",
+      "imagenes": [
+        "assets/noticias/noticia-10.jpg"
+      ],
+      "pagina": "noticia-10.html",
+      "requierePago": true
     }
   ],
   "pagos": [
@@ -206,6 +221,19 @@
       "concepto": "Taller de Técnica Diamante",
       "fecha": "2026-11-10",
       "pagina": "noticia-9.html",
+      "valor": 25000,
+      "unidad": "por persona",
+      "moneda": "COP",
+      "incluye": "materiales",
+      "enlacePago": null,
+      "estado": "inscripcion-por-whatsapp",
+      "telefono": "3107833829"
+    },
+    {
+      "id": "gorro-bufanda-2026",
+      "concepto": "Gorro y Bufanda Navideños",
+      "fecha": "2026-11-11",
+      "pagina": "noticia-10.html",
       "valor": 25000,
       "unidad": "por persona",
       "moneda": "COP",
