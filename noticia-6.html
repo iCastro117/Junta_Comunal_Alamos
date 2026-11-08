@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/estilos.css?v=20261108k" />
+  <link rel="stylesheet" href="css/estilos.css?v=20261108m" />
 
   <!-- Datos estructurados (JSON-LD) para buscadores -->
   <script type="application/ld+json">
@@ -109,36 +109,37 @@
 
       <article class="articulo__principal">
         <!-- Galería del taller. La portada de la tarjeta sigue siendo
-             assets/noticias/noticia-6.jpg; aquí solo cambia el orden. -->
+             assets/noticias/noticia-6.jpg; aquí solo cambia el orden.
+             OJO: noticia6.4.jpg es el afiche viejo, dice "NOVIEMBRE 3". -->
         <div class="galeria">
 
           <div class="galeria__miniaturas" id="galeriaMiniaturas">
             <button class="miniatura miniatura--activa" type="button"
-                    data-imagen="assets/ConocerMas/noticia6.1.jpg" aria-label="Ver foto 1 de 5">
+                    data-imagen="assets/ConocerMas/noticia6.4.jpg" aria-label="Ver foto 1 de 5">
+              <img src="assets/ConocerMas/noticia6.4.jpg" alt="" loading="lazy" />
+            </button>
+            <button class="miniatura" type="button"
+                    data-imagen="assets/ConocerMas/noticia6.1.jpg" aria-label="Ver foto 2 de 5">
               <img src="assets/ConocerMas/noticia6.1.jpg" alt="" loading="lazy" />
             </button>
             <button class="miniatura" type="button"
-                    data-imagen="assets/ConocerMas/noticia6.3.jpg" aria-label="Ver foto 2 de 5">
+                    data-imagen="assets/ConocerMas/noticia6.3.jpg" aria-label="Ver foto 3 de 5">
               <img src="assets/ConocerMas/noticia6.3.jpg" alt="" loading="lazy" />
             </button>
             <button class="miniatura" type="button"
-                    data-imagen="assets/noticias/noticia-6.jpg" aria-label="Ver foto 3 de 5">
+                    data-imagen="assets/noticias/noticia-6.jpg" aria-label="Ver foto 4 de 5">
               <img src="assets/noticias/noticia-6.jpg" alt="" loading="lazy" />
             </button>
             <button class="miniatura" type="button"
-                    data-imagen="assets/ConocerMas/noticia6.2.jpg" aria-label="Ver foto 4 de 5">
+                    data-imagen="assets/ConocerMas/noticia6.2.jpg" aria-label="Ver foto 5 de 5">
               <img src="assets/ConocerMas/noticia6.2.jpg" alt="" loading="lazy" />
-            </button>
-            <button class="miniatura" type="button"
-                    data-imagen="assets/ConocerMas/noticia6.4.jpg" aria-label="Ver foto 5 de 5">
-              <img src="assets/ConocerMas/noticia6.4.jpg" alt="" loading="lazy" />
             </button>
           </div>
 
           <figure class="galeria__principal">
             <img class="galeria__imagen" id="galeriaImagen"
-                 src="assets/ConocerMas/noticia6.1.jpg"
-                 alt="Afiche del Taller Navideño" />
+                 src="assets/ConocerMas/noticia6.4.jpg"
+                 alt="Afiche del Taller Navideño de la JAC Los Álamos" />
             <figcaption class="galeria__contador">
               <span id="galeriaContador">1</span> / 5
             </figcaption>
@@ -300,6 +301,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20261108k"></script>
+  <script src="js/script.js?v=20261108m"></script>
 </body>
 </html>
