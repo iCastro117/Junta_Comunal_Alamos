@@ -2,12 +2,18 @@ CARPETA: CONOCERMAS
 
 Fotos extra de las galerias de las paginas de noticia.
 
-  noticia1.1.jpg       -> foto 2 de noticia-1.html (Dia Dulce)
+  noticia1.1.jpg       -> noticia-1.html (Dia Dulce)
   noticia3.1 a 3.2     -> noticia-3.html (Simulacro)
   noticia4.1 a 4.2     -> noticia-4.html (Viejoteca, afiches)
-  noticia6.1 a 6.4     -> noticia-6.html (Taller Navideno)
+  noticia6.1 a 6.3     -> noticia-6.html (Taller Navideno)
   noticia8.1 a 8.4     -> noticia-8.html (Dia de los Ninos)
   noticia11.1 a 11.18  -> noticia-11.html (Viejoteca, como se vivio)
+  noticia12.1 a 12.3   -> noticia-12.html (Dia de la Accion Comunal)
+
+SIN USAR:
+  noticia6.4.jpg -> afiche viejo del Taller Navideno, dice "NOVIEMBRE 3".
+                    El taller se movio al 5 de diciembre, asi que se retiro
+                    de la galeria. Se puede borrar.
 
 La foto principal de cada noticia, la que sale en la tarjeta del inicio,
 va en assets/noticias/ como noticia-N.jpg
