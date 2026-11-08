@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/estilos.css?v=20261108h" />
+  <link rel="stylesheet" href="css/estilos.css?v=20261108i" />
 
   <!-- Datos estructurados (JSON-LD) para buscadores -->
   <script type="application/ld+json">
@@ -108,34 +108,32 @@
     <div class="contenedor articulo__grid">
 
       <article class="articulo__principal">
-        <!-- Saludos por el Día de la Acción Comunal -->
+        <!-- Saludos por el Día de la Acción Comunal.
+             La portada (assets/noticias/noticia-12.jpg) no va aquí:
+             solo se usa en la tarjeta del inicio. -->
         <div class="galeria galeria--muchas">
 
           <div class="galeria__miniaturas" id="galeriaMiniaturas">
             <button class="miniatura miniatura--activa" type="button"
-                    data-imagen="assets/noticias/noticia-12.jpg" aria-label="Ver imagen 1 de 4">
-              <img src="assets/noticias/noticia-12.jpg" alt="" loading="lazy" />
-            </button>
-            <button class="miniatura" type="button"
-                    data-imagen="assets/ConocerMas/noticia12.1.jpg" aria-label="Ver imagen 2 de 4">
+                    data-imagen="assets/ConocerMas/noticia12.1.jpg" aria-label="Ver imagen 1 de 3">
               <img src="assets/ConocerMas/noticia12.1.jpg" alt="" loading="lazy" />
             </button>
             <button class="miniatura" type="button"
-                    data-imagen="assets/ConocerMas/noticia12.2.jpg" aria-label="Ver imagen 3 de 4">
+                    data-imagen="assets/ConocerMas/noticia12.2.jpg" aria-label="Ver imagen 2 de 3">
               <img src="assets/ConocerMas/noticia12.2.jpg" alt="" loading="lazy" />
             </button>
             <button class="miniatura" type="button"
-                    data-imagen="assets/ConocerMas/noticia12.3.jpg" aria-label="Ver imagen 4 de 4">
+                    data-imagen="assets/ConocerMas/noticia12.3.jpg" aria-label="Ver imagen 3 de 3">
               <img src="assets/ConocerMas/noticia12.3.jpg" alt="" loading="lazy" />
             </button>
           </div>
 
           <figure class="galeria__principal">
             <img class="galeria__imagen" id="galeriaImagen"
-                 src="assets/noticias/noticia-12.jpg"
-                 alt="Día Comunal, saludo de Asojuntas Engativá" />
+                 src="assets/ConocerMas/noticia12.1.jpg"
+                 alt="Saludo por el Día de la Acción Comunal" />
             <figcaption class="galeria__contador">
-              <span id="galeriaContador">1</span> / 4
+              <span id="galeriaContador">1</span> / 3
             </figcaption>
           </figure>
 
@@ -266,6 +264,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20261108h"></script>
+  <script src="js/script.js?v=20261108i"></script>
 </body>
 </html>
