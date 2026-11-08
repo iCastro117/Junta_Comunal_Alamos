@@ -35,9 +35,9 @@ const banners = [
   },
   {
     imagen: "assets/banner/banner-4.jpg",
-    titulo: ["Viejoteca", "Este 7 de noviembre!"],
-    texto: ["Disfruta de música, baile y buenos recuerdos con vecinos", "y amigos en el Salón Comunal."],
-    enlace: "noticia-4.html"
+    titulo: ["Así se vivió", "la Viejoteca"],
+    texto: ["Música, baile y buenos recuerdos", "hasta la madrugada."],
+    enlace: "noticia-11.html"
   }
 ];
 
