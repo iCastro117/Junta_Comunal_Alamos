@@ -14,7 +14,15 @@
              Si todavía no hay noticia, se deja "#noticias" y lleva
              al listado completo.
    ------------------------------------------------------------ */
+/* Ojo: manda el ORDEN de esta lista, no el número del archivo.
+   El banner-5 va de primero porque está primero aquí. */
 const banners = [
+  {
+    imagen: "assets/banner/banner-5.jpg",
+    titulo: ["¡Feliz Día de", "la Acción Comunal!"],
+    texto: ["Hoy celebramos a las líderes y los líderes", "comunales que construyen barrio desde la base."],
+    enlace: "noticia-12.html"
+  },
   {
     imagen: "assets/banner/banner-1.jpg",
     titulo: ["Juntos", "construimos", "un mejor barrio"],
