@@ -2110,3 +2110,6 @@ body { overflow-x: clip; }
 
 /* Foto de la noticia 11 en la tarjeta del inicio */
 .noticia__img--11 { background-image: url("../assets/noticias/noticia-11.jpg"); }
+
+/* Imagen de la noticia 12 en la tarjeta del inicio */
+.noticia__img--12 { background-image: url("../assets/noticias/noticia-12.jpg"); }

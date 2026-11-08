@@ -208,6 +208,24 @@
       ],
       "pagina": "noticia-11.html",
       "requierePago": false
+    },
+    {
+      "id": 12,
+      "slug": "dia-de-la-accion-comunal",
+      "titulo": "¡Feliz Día de la Acción Comunal!",
+      "categoria": "comunidad",
+      "fecha": "2026-11-08",
+      "fechaTexto": "8 de noviembre",
+      "resumen": "Hoy celebramos a las líderes y los líderes comunales que construyen barrio desde la base.",
+      "detalle": "Con los saludos de Bogotá y de Asojuntas Engativá a todas las Juntas.",
+      "imagenes": [
+        "assets/noticias/noticia-12.jpg",
+        "assets/ConocerMas/noticia12.1.jpg",
+        "assets/ConocerMas/noticia12.2.jpg",
+        "assets/ConocerMas/noticia12.3.jpg"
+      ],
+      "pagina": "noticia-12.html",
+      "requierePago": false
     }
   ],
   "pagos": [
