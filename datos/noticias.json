@@ -241,6 +241,21 @@
       ],
       "pagina": "noticia-13.html",
       "requierePago": true
+    },
+    {
+      "id": 14,
+      "slug": "moviclown-fest",
+      "titulo": "MoviClown Fest en el Salón Comunal",
+      "categoria": "actividades",
+      "fecha": "2026-11-08",
+      "fechaTexto": "8 de noviembre",
+      "resumen": "La JAC Los Álamos invita a toda la familia al MoviClown Fest: hoy de 2:00 a 4:00 p. m. en el Salón Comunal.",
+      "detalle": "Payasos, magia y teatro con entrada gratuita.",
+      "imagenes": [
+        "assets/noticias/noticia-14.jpg"
+      ],
+      "pagina": "noticia-14.html",
+      "requierePago": false
     }
   ],
   "pagos": [
