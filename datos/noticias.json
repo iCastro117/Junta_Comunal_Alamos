@@ -1,7 +1,7 @@
 {
   "$comentario": "Fuente de datos de las noticias y los cobros. Los pagos no se hacen en linea: se coordinan por WhatsApp o de forma presencial, segun lo que indique cada evento. El sitio es HTML estatico y no lee este archivo en caliente; sirve como fuente unica de verdad.",
   "version": "1.0",
-  "actualizado": "2026-11-05",
+  "actualizado": "2026-11-08",
   "organizacion": {
     "nombre": "Junta de Acción Comunal Barrio Los Álamos",
     "sigla": "JAC Los Álamos",
@@ -175,6 +175,39 @@
       ],
       "pagina": "noticia-10.html",
       "requierePago": true
+    },
+    {
+      "id": 11,
+      "slug": "asi-se-vivio-la-viejoteca",
+      "titulo": "Así se vivió la Viejoteca",
+      "categoria": "comunidad",
+      "fecha": "2026-11-07",
+      "fechaTexto": "7 de noviembre",
+      "resumen": "El Salón Comunal se llenó de música, baile y buenos recuerdos hasta la madrugada.",
+      "detalle": "Gracias a cada vecino que nos acompañó. ¡Nos vemos en la próxima!",
+      "imagenes": [
+        "assets/noticias/noticia-11.jpg",
+        "assets/ConocerMas/noticia11.1.jpg",
+        "assets/ConocerMas/noticia11.2.jpg",
+        "assets/ConocerMas/noticia11.3.jpg",
+        "assets/ConocerMas/noticia11.4.jpg",
+        "assets/ConocerMas/noticia11.5.jpg",
+        "assets/ConocerMas/noticia11.6.jpg",
+        "assets/ConocerMas/noticia11.7.jpg",
+        "assets/ConocerMas/noticia11.8.jpg",
+        "assets/ConocerMas/noticia11.9.jpg",
+        "assets/ConocerMas/noticia11.10.jpg",
+        "assets/ConocerMas/noticia11.11.jpg",
+        "assets/ConocerMas/noticia11.12.jpg",
+        "assets/ConocerMas/noticia11.13.jpg",
+        "assets/ConocerMas/noticia11.14.jpg",
+        "assets/ConocerMas/noticia11.15.jpg",
+        "assets/ConocerMas/noticia11.16.jpg",
+        "assets/ConocerMas/noticia11.17.jpg",
+        "assets/ConocerMas/noticia11.18.jpg"
+      ],
+      "pagina": "noticia-11.html",
+      "requierePago": false
     }
   ],
   "pagos": [
