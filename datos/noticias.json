@@ -226,6 +226,21 @@
       ],
       "pagina": "noticia-12.html",
       "requierePago": false
+    },
+    {
+      "id": 13,
+      "slug": "clase-de-baile-rumba",
+      "titulo": "Clase de Baile Rumba",
+      "categoria": "actividades",
+      "fecha": "2026-11-10",
+      "fechaTexto": "10 de noviembre",
+      "resumen": "La Academia Orgullo Colombiano invita a una clase de rumba: martes 10 de noviembre, de 6:00 a 7:00 p. m.",
+      "detalle": "Valor $7.000 la clase, en el Salón Comunal. No necesitas experiencia ni pareja.",
+      "imagenes": [
+        "assets/noticias/noticia-13.jpg"
+      ],
+      "pagina": "noticia-13.html",
+      "requierePago": true
     }
   ],
   "pagos": [
@@ -287,6 +302,17 @@
       "incluye": "materiales",
       "estado": "inscripcion-por-whatsapp",
       "telefono": "3107833829"
+    },
+    {
+      "id": "rumba-2026",
+      "concepto": "Clase de Baile Rumba",
+      "fecha": "2026-11-10",
+      "pagina": "noticia-13.html",
+      "valor": 7000,
+      "unidad": "la clase",
+      "moneda": "COP",
+      "estado": "cobro-presencial",
+      "organiza": "Academia de Baile Orgullo Colombiano"
     }
   ]
 }
